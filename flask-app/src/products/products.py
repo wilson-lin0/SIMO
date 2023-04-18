@@ -63,27 +63,3 @@ def get_most_pop_products():
         json_data.append(dict(zip(column_headers, row)))
 
     return jsonify(json_data)
-
-
-@products.route('/mostExpensive')
-def get_most_pop_products():
-    cursor = db.get_db().cursor()
-    query = '''
-        SELECT product_code, product_name, list_price, reorder_level
-        FROM product
-        ORDER BY list_price DESC
-        LIMIT 5
-    '''
-
-    cursor.exec
-
-    column_header = [x[0] for x in cursor.description]
-
-    json_data = []
-
-    theData = cursor.fetchall()
-
-    for row in theData:
-        json_data.append(dict(zip(column_header, row)))
-
-    return jsonify(json_data)
