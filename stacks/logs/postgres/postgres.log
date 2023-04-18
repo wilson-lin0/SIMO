@@ -169,3 +169,35 @@
 2023-04-18 20:55:23.739 UTC [1445] HINT:  The server must be started by the user that owns the data directory.
 2023-04-18 20:55:27.773 UTC [1522] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
 2023-04-18 20:55:27.773 UTC [1522] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:19:46.964 UTC [1361] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:19:46.964 UTC [1361] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:19:48.480 UTC [1437] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:19:48.480 UTC [1437] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:19:50.588 UTC [1446] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:19:50.588 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:19:54.313 UTC [1460] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:19:54.313 UTC [1460] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:25:24.797 UTC [1360] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:25:24.797 UTC [1360] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:25:25.868 UTC [1410] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:25:25.868 UTC [1410] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:25:28.417 UTC [1446] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:25:28.417 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:25:32.029 UTC [1460] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:25:32.029 UTC [1460] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:50:43.743 UTC [1359] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:50:43.743 UTC [1359] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:50:44.775 UTC [1410] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:50:44.775 UTC [1410] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:50:47.320 UTC [1446] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:50:47.320 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:50:50.782 UTC [1460] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:50:50.782 UTC [1460] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:54:00.761 UTC [1366] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:54:00.761 UTC [1366] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:54:01.794 UTC [1410] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:54:01.794 UTC [1410] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:54:04.050 UTC [1446] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:54:04.050 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 22:54:07.341 UTC [1460] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 22:54:07.341 UTC [1460] HINT:  The server must be started by the user that owns the data directory.
