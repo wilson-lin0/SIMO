@@ -37,7 +37,7 @@ services:
 
     ports:
       # mapping host port 3200 to container port 3306
-      - 3200:3306
+      - 3205:3306
 
     restart: unless-stopped
     
