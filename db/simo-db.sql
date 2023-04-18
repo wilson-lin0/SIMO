@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS simo;
 CREATE DATABASE simo;
+grant all privileges on simo.* to 'webapp'@'%';
+flush privileges;
 USE simo;
 
 CREATE TABLE User (
@@ -12,23 +14,33 @@ CREATE TABLE User (
     city VARCHAR(50),
     state VARCHAR(50),
     zip_code INT,
-    user_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1)
+    user_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1),
+    INDEX `first_name` (`first_name` ASC),
+    INDEX `last_name` (`last_name` ASC)
 );
 
-CREATE TABLE Buyer_Info (
+CREATE TABLE Buyer (
     buyer_id INT PRIMARY KEY,
     phone_number INT,
     email VARCHAR(100),
     total_buyer_rating INT,
-    FOREIGN KEY (buyer_id) REFERENCES User(nuid)
+    buyer_first_name VARCHAR(50),
+    buyer_last_name VARCHAR(50),
+    FOREIGN KEY (buyer_id) REFERENCES User(nuid),
+    FOREIGN KEY (buyer_first_name) REFERENCES User(first_name),
+    FOREIGN KEY (buyer_last_name) REFERENCES User(last_name)
 );
 
-CREATE TABLE Seller_Info (
+CREATE TABLE Seller (
     seller_id INT PRIMARY KEY,
     phone_number INT,
     email_address VARCHAR(100),
     total_seller_rating INT,
-    FOREIGN KEY (seller_id) REFERENCES User(nuid)
+    seller_first_name VARCHAR(50),
+    seller_last_name VARCHAR(50),
+    FOREIGN KEY (seller_id) REFERENCES User(nuid),
+    FOREIGN KEY (seller_first_name) REFERENCES User(first_name),
+    FOREIGN KEY (seller_last_name) REFERENCES User(last_name)
 );
 
 CREATE TABLE Orders (
@@ -38,8 +50,8 @@ CREATE TABLE Orders (
     seller_id INT,
     total_price DOUBLE,
     seller_rating INT,
-    FOREIGN KEY (buyer_id) REFERENCES Buyer_Info(buyer_id),
-    FOREIGN KEY (seller_id) REFERENCES Seller_Info(seller_id)
+    FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id),
+    FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)
 );
 
 CREATE TABLE Meeting_Location (
@@ -65,7 +77,7 @@ CREATE TABLE Product (
     condition_type VARCHAR(50),
     seller_id INT,
     FOREIGN KEY (category_id) REFERENCES Category(category_id),
-    FOREIGN KEY (seller_id) REFERENCES Seller_Info(seller_id)
+    FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)
 );
 
 CREATE TABLE Order_Details (
