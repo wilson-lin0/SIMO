@@ -1,11 +1,16 @@
-![](https://raw.githubusercontent.com/appsmithorg/appsmith/release/static/appsmith_logo_primary.png)
+# MySQL + Flask Boilerplate Project
 
-This app is built using Appsmith. Turn any datasource into an internal app in minutes. Appsmith lets you drag-and-drop components to build dashboards, write logic with JavaScript objects and connect to any API, database or GraphQL source.
+This repo contains a boilerplate setup for spinning up 3 Docker containers: 
+1. A MySQL 8 container for obvious reasons
+1. A Python Flask container to implement a REST API
+1. A Local AppSmith Server
 
-![](https://raw.githubusercontent.com/appsmithorg/appsmith/release/static/images/integrations.png)
+## How to setup and start the containers
+**Important** - you need Docker Desktop installed
 
-### [Github](https://github.com/appsmithorg/appsmith) • [Docs](https://docs.appsmith.com/?utm_source=github&utm_medium=social&utm_content=appsmith_docs&utm_campaign=null&utm_term=appsmith_docs) • [Community](https://community.appsmith.com/) • [Tutorials](https://github.com/appsmithorg/appsmith/tree/update/readme#tutorials) • [Youtube](https://www.youtube.com/appsmith) • [Discord](https://discord.gg/rBTTVJp)
-
-##### You can visit the application using the below link
-
-###### [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://app.appsmith.com/applications/642d7fc18bcbc643fd5d01ba/pages/642d7fc18bcbc643fd5d01bd) [![](https://assets.appsmith.com/git-sync/Buttons2.svg)](https://app.appsmith.com/applications/642d7fc18bcbc643fd5d01ba/pages/642d7fc18bcbc643fd5d01bd/edit)
+1. Clone this repository.  
+1. Create a file named `db_root_password.txt` in the `secrets/` folder and put inside of it the root password for MySQL. 
+1. Create a file named `db_password.txt` in the `secrets/` folder and put inside of it the password you want to use for the a non-root user named webapp. 
+1. In a terminal or command prompt, navigate to the folder with the `docker-compose.yml` file.  
+1. Build the images with `docker compose build`
+1. Start the containers with `docker compose up`.  To run in detached mode, run `docker compose up -d`. 
