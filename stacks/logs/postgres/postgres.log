@@ -1,0 +1,59 @@
+2023-04-03 13:43:04.284 UTC [1600] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-03 13:43:04.284 UTC [1600] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-03 13:43:04.292 UTC [1600] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-03 13:43:04.331 UTC [1628] LOG:  database system was shut down at 2023-04-03 13:43:02 UTC
+2023-04-03 13:43:04.373 UTC [1600] LOG:  database system is ready to accept connections
+2023-04-05 13:42:16.168 UTC [1362] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-05 13:42:16.168 UTC [1362] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-05 13:42:16.177 UTC [1362] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-05 13:42:16.279 UTC [1398] LOG:  database system was interrupted; last known up at 2023-04-03 13:48:14 UTC
+2023-04-05 13:42:36.966 UTC [1398] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-04-05 13:42:37.005 UTC [1398] LOG:  redo starts at 0/17FA7B8
+2023-04-05 13:42:37.006 UTC [1398] LOG:  invalid record length at 0/17FA8A0: wanted 24, got 0
+2023-04-05 13:42:37.006 UTC [1398] LOG:  redo done at 0/17FA868
+2023-04-05 13:42:37.130 UTC [1362] LOG:  database system is ready to accept connections
+2023-04-05 13:42:53.311 UTC [1362] LOG:  received smart shutdown request
+2023-04-05 13:42:53.320 UTC [1362] LOG:  background worker "logical replication launcher" (PID 1602) exited with exit code 1
+2023-04-05 13:42:53.321 UTC [1597] LOG:  shutting down
+2023-04-05 13:42:53.412 UTC [1362] LOG:  database system is shut down
+2023-04-05 13:43:04.094 UTC [1363] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-05 13:43:04.094 UTC [1363] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-05 13:43:04.101 UTC [1363] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-05 13:43:04.137 UTC [1402] LOG:  database system was shut down at 2023-04-05 13:42:53 UTC
+2023-04-05 13:43:04.174 UTC [1363] LOG:  database system is ready to accept connections
+2023-04-05 14:40:02.930 UTC [1363] LOG:  received smart shutdown request
+2023-04-05 14:40:02.947 UTC [1363] LOG:  background worker "logical replication launcher" (PID 1408) exited with exit code 1
+2023-04-05 14:40:02.948 UTC [1403] LOG:  shutting down
+2023-04-05 14:40:03.042 UTC [1363] LOG:  database system is shut down
+2023-04-05 20:03:34.845 UTC [1360] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-05 20:03:34.845 UTC [1360] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-05 20:03:34.856 UTC [1360] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-05 20:03:34.914 UTC [1398] LOG:  database system was shut down at 2023-04-05 14:40:02 UTC
+2023-04-05 20:03:35.062 UTC [1360] LOG:  database system is ready to accept connections
+2023-04-08 02:50:26.905 UTC [1362] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-08 02:50:26.905 UTC [1362] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-08 02:50:26.915 UTC [1362] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-08 02:50:26.987 UTC [1399] LOG:  database system was interrupted; last known up at 2023-04-05 20:08:35 UTC
+2023-04-08 02:50:47.883 UTC [1399] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-04-08 02:50:47.920 UTC [1399] LOG:  redo starts at 0/17FAB98
+2023-04-08 02:50:47.921 UTC [1399] LOG:  invalid record length at 0/17FAC80: wanted 24, got 0
+2023-04-08 02:50:47.921 UTC [1399] LOG:  redo done at 0/17FAC48
+2023-04-08 02:50:48.051 UTC [1362] LOG:  database system is ready to accept connections
+2023-04-10 13:21:21.032 UTC [1361] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-10 13:21:21.032 UTC [1361] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-10 13:21:21.039 UTC [1361] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-10 13:21:21.124 UTC [1382] LOG:  database system was interrupted; last known up at 2023-04-08 02:50:48 UTC
+2023-04-10 13:21:38.581 UTC [1382] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-04-10 13:21:38.613 UTC [1382] LOG:  redo starts at 0/17FACF8
+2023-04-10 13:21:38.613 UTC [1382] LOG:  invalid record length at 0/17FAD30: wanted 24, got 0
+2023-04-10 13:21:38.613 UTC [1382] LOG:  redo done at 0/17FACF8
+2023-04-10 13:21:38.732 UTC [1361] LOG:  database system is ready to accept connections
+2023-04-12 13:48:33.388 UTC [1358] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-12 13:48:33.388 UTC [1358] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-12 13:48:33.397 UTC [1358] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-12 13:48:33.456 UTC [1382] LOG:  database system was interrupted; last known up at 2023-04-10 13:21:38 UTC
+2023-04-12 13:48:50.992 UTC [1382] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-04-12 13:48:51.027 UTC [1382] LOG:  redo starts at 0/17FADA8
+2023-04-12 13:48:51.027 UTC [1382] LOG:  invalid record length at 0/17FADE0: wanted 24, got 0
+2023-04-12 13:48:51.027 UTC [1382] LOG:  redo done at 0/17FADA8
+2023-04-12 13:48:51.156 UTC [1358] LOG:  database system is ready to accept connections
