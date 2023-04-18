@@ -201,3 +201,19 @@
 2023-04-18 22:54:04.050 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
 2023-04-18 22:54:07.341 UTC [1460] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
 2023-04-18 22:54:07.341 UTC [1460] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:03:22.862 UTC [1364] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:03:22.862 UTC [1364] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:03:23.893 UTC [1410] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:03:23.893 UTC [1410] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:03:26.218 UTC [1446] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:03:26.218 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:03:29.573 UTC [1460] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:03:29.573 UTC [1460] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:07:32.426 UTC [1364] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:07:32.426 UTC [1364] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:07:33.456 UTC [1409] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:07:33.456 UTC [1409] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:07:35.846 UTC [1446] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:07:35.846 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
+2023-04-18 23:07:39.785 UTC [1461] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-18 23:07:39.785 UTC [1461] HINT:  The server must be started by the user that owns the data directory.

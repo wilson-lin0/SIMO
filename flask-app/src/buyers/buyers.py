@@ -10,7 +10,7 @@ buyers = Blueprint('buyers', __name__)
 def get_buyers():
     cursor = db.get_db().cursor()
     cursor.execute('select buyer_first_name, buyer_last_name,\
-        phone_number, email, total_buyer_rating from Buyer')
+        phone_number, buyer_email, total_buyer_rating from Buyer')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -21,7 +21,7 @@ def get_buyers():
     the_response.mimetype = 'application/json'
     return the_response
 
-# Get customer detail for customer with particular userID
+# Get buyer's detail for buyer with particular userID
 @buyers.route('/buyers/<buyer_id>', methods=['GET'])
 def get_buyers_id(buyer_id):
     cursor = db.get_db().cursor()

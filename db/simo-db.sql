@@ -17,7 +17,7 @@ CREATE TABLE User (
 CREATE TABLE Buyer (
     buyer_id INT PRIMARY KEY,
     phone_number INT,
-    email VARCHAR(100),
+    buyer_email VARCHAR(100),
     total_buyer_rating INT,
     street_address VARCHAR(100),
     city VARCHAR(50),
@@ -33,7 +33,7 @@ CREATE TABLE Buyer (
 CREATE TABLE Seller (
     seller_id INT PRIMARY KEY,
     phone_number INT,
-    email_address VARCHAR(100),
+    seller_email VARCHAR(100),
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
