@@ -9,7 +9,7 @@ sellers = Blueprint('sellers', __name__)
 def get_sellers():
     cursor = db.get_db().cursor()
     cursor.execute('select seller_first_name, seller_last_name,\
-        phone_number, seller_email, from Seller')
+        phone_number, seller_email, total_seller_rating from Seller')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
