@@ -217,6 +217,7 @@
 2023-04-18 23:07:35.846 UTC [1446] HINT:  The server must be started by the user that owns the data directory.
 2023-04-18 23:07:39.785 UTC [1461] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
 2023-04-18 23:07:39.785 UTC [1461] HINT:  The server must be started by the user that owns the data directory.
+<<<<<<< HEAD
 2023-04-18 23:18:20.160 UTC [1356] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
 2023-04-18 23:18:20.160 UTC [1356] HINT:  The server must be started by the user that owns the data directory.
 2023-04-18 23:18:21.305 UTC [1399] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
@@ -231,3 +232,13 @@
 2023-04-18 23:18:28.929 UTC [1504] HINT:  The server must be started by the user that owns the data directory.
 2023-04-18 23:18:32.114 UTC [1534] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
 2023-04-18 23:18:32.114 UTC [1534] HINT:  The server must be started by the user that owns the data directory.
+=======
+2023-04-19 02:27:18.270 UTC [1358] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-19 02:27:18.270 UTC [1358] HINT:  The server must be started by the user that owns the data directory.
+2023-04-19 02:27:21.025 UTC [1417] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-19 02:27:21.025 UTC [1417] HINT:  The server must be started by the user that owns the data directory.
+2023-04-19 02:27:23.577 UTC [1425] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-19 02:27:23.577 UTC [1425] HINT:  The server must be started by the user that owns the data directory.
+2023-04-19 02:27:26.910 UTC [1436] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
+2023-04-19 02:27:26.910 UTC [1436] HINT:  The server must be started by the user that owns the data directory.
+>>>>>>> 687f80524cce73a40c1d33a3d45b31005af0bdb0
