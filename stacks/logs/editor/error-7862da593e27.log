@@ -1,0 +1,92 @@
++ http_conf=/opt/appsmith/templates/nginx-app-http.conf.template.sh
++ https_conf=/opt/appsmith/templates/nginx-app-https.conf.template.sh
++ ssl_conf_path=/appsmith-stacks/data/certificate/conf
++ APP_TEMPLATE=/opt/appsmith/templates/nginx-app-http.conf.template.sh
++ mkdir -pv /appsmith-stacks/data/certificate/conf
++ cat
++ cat
++ [[ -z 'self' * ]]
++ export 'APPSMITH_ALLOWED_FRAME_ANCESTORS='\''self'\'' *'
++ APPSMITH_ALLOWED_FRAME_ANCESTORS=''\''self'\'' *'
++ [[ -z false ]]
++ [[ -n '' ]]
++ bash /opt/appsmith/templates/nginx-app-http.conf.template.sh ''
++ index_html_served=/opt/appsmith/editor/index.html
++ index_html_original=/opt/appsmith/index.html.original
++ [[ ! -f /opt/appsmith/index.html.original ]]
++ cp -v /opt/appsmith/editor/index.html /opt/appsmith/index.html.original
++ node -e '
+const fs = require("fs")
+const content = fs.readFileSync("/opt/appsmith/index.html.original", "utf8").replace(
+  /\b__(APPSMITH_[A-Z0-9_]+)__\b/g,
+  (placeholder, name) => (process.env[name] || "")
+)
+fs.writeFileSync("/opt/appsmith/editor/index.html", content)
+'
++ exec nginx -g 'daemon off;error_log stderr info;'
+2023/04/18 18:38:14 [notice] 1347#1347: using the "epoll" event method
+2023/04/18 18:38:14 [notice] 1347#1347: nginx/1.18.0 (Ubuntu)
+2023/04/18 18:38:14 [notice] 1347#1347: OS: Linux 5.15.49-linuxkit
+2023/04/18 18:38:14 [notice] 1347#1347: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/04/18 18:38:14 [notice] 1347#1347: start worker processes
+2023/04/18 18:38:14 [notice] 1347#1347: start worker process 1378
+2023/04/18 18:38:14 [notice] 1347#1347: start worker process 1379
+2023/04/18 18:38:14 [notice] 1347#1347: start worker process 1380
+2023/04/18 18:38:14 [notice] 1347#1347: start worker process 1381
+2023/04/18 19:29:56 [notice] 1347#1347: signal 3 (SIGQUIT) received from 1, shutting down
+2023/04/18 19:29:56 [notice] 1378#1378: gracefully shutting down
+2023/04/18 19:29:56 [notice] 1381#1381: gracefully shutting down
+2023/04/18 19:29:56 [notice] 1378#1378: exiting
+2023/04/18 19:29:56 [notice] 1381#1381: exiting
+2023/04/18 19:29:56 [notice] 1380#1380: gracefully shutting down
+2023/04/18 19:29:56 [notice] 1379#1379: gracefully shutting down
+2023/04/18 19:29:56 [notice] 1380#1380: exiting
+2023/04/18 19:29:56 [notice] 1379#1379: exiting
+2023/04/18 19:29:56 [notice] 1378#1378: exit
+2023/04/18 19:29:56 [notice] 1380#1380: exit
+2023/04/18 19:29:56 [notice] 1381#1381: exit
+2023/04/18 19:29:56 [notice] 1379#1379: exit
+2023/04/18 19:29:56 [notice] 1347#1347: signal 17 (SIGCHLD) received from 1378
+2023/04/18 19:29:56 [notice] 1347#1347: worker process 1378 exited with code 0
+2023/04/18 19:29:56 [notice] 1347#1347: signal 29 (SIGIO) received
+2023/04/18 19:29:56 [notice] 1347#1347: signal 17 (SIGCHLD) received from 1380
+2023/04/18 19:29:56 [notice] 1347#1347: worker process 1379 exited with code 0
+2023/04/18 19:29:56 [notice] 1347#1347: worker process 1380 exited with code 0
+2023/04/18 19:29:56 [notice] 1347#1347: signal 29 (SIGIO) received
+2023/04/18 19:29:56 [notice] 1347#1347: signal 17 (SIGCHLD) received from 1381
+2023/04/18 19:29:56 [notice] 1347#1347: worker process 1381 exited with code 0
+2023/04/18 19:29:56 [notice] 1347#1347: exit
++ http_conf=/opt/appsmith/templates/nginx-app-http.conf.template.sh
++ https_conf=/opt/appsmith/templates/nginx-app-https.conf.template.sh
++ ssl_conf_path=/appsmith-stacks/data/certificate/conf
++ APP_TEMPLATE=/opt/appsmith/templates/nginx-app-http.conf.template.sh
++ mkdir -pv /appsmith-stacks/data/certificate/conf
++ cat
++ cat
++ [[ -z 'self' * ]]
++ export 'APPSMITH_ALLOWED_FRAME_ANCESTORS='\''self'\'' *'
++ APPSMITH_ALLOWED_FRAME_ANCESTORS=''\''self'\'' *'
++ [[ -z false ]]
++ [[ -n '' ]]
++ bash /opt/appsmith/templates/nginx-app-http.conf.template.sh ''
++ index_html_served=/opt/appsmith/editor/index.html
++ index_html_original=/opt/appsmith/index.html.original
++ [[ ! -f /opt/appsmith/index.html.original ]]
++ node -e '
+const fs = require("fs")
+const content = fs.readFileSync("/opt/appsmith/index.html.original", "utf8").replace(
+  /\b__(APPSMITH_[A-Z0-9_]+)__\b/g,
+  (placeholder, name) => (process.env[name] || "")
+)
+fs.writeFileSync("/opt/appsmith/editor/index.html", content)
+'
++ exec nginx -g 'daemon off;error_log stderr info;'
+2023/04/19 02:27:18 [notice] 1354#1354: using the "epoll" event method
+2023/04/19 02:27:18 [notice] 1354#1354: nginx/1.18.0 (Ubuntu)
+2023/04/19 02:27:18 [notice] 1354#1354: OS: Linux 5.15.49-linuxkit
+2023/04/19 02:27:18 [notice] 1354#1354: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/04/19 02:27:18 [notice] 1354#1354: start worker processes
+2023/04/19 02:27:18 [notice] 1354#1354: start worker process 1381
+2023/04/19 02:27:18 [notice] 1354#1354: start worker process 1382
+2023/04/19 02:27:18 [notice] 1354#1354: start worker process 1383
+2023/04/19 02:27:18 [notice] 1354#1354: start worker process 1384
