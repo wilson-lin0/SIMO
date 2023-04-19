@@ -164,9 +164,8 @@ CREATE TABLE Buyer (
     zip_code INT,
     buyer_first_name VARCHAR(50),
     buyer_last_name VARCHAR(50),
-    FOREIGN KEY (buyer_id) REFERENCES User(nuid),
-    FOREIGN KEY (buyer_first_name) REFERENCES User(first_name),
-    FOREIGN KEY (buyer_last_name) REFERENCES User(last_name)
+    buyer_pass VARCHAR(15),
+    buyer_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1),
 );
 
 CREATE TABLE Seller (
@@ -180,9 +179,8 @@ CREATE TABLE Seller (
     total_seller_rating INT,
     seller_first_name VARCHAR(50),
     seller_last_name VARCHAR(50),
-    FOREIGN KEY (seller_id) REFERENCES User(nuid),
-    FOREIGN KEY (seller_first_name) REFERENCES User(first_name),
-    FOREIGN KEY (seller_last_name) REFERENCES User(last_name)
+    seller_pass VARCHAR(15),
+    seller_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1)
 );
 
 CREATE TABLE Orders (

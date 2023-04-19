@@ -96,12 +96,14 @@ def add_new_seller():
     zip_code = req_data['zip_code']
     seller_first_name = req_data['seller_first_name']
     seller_last_name = req_data['seller_last_name']
+    seller_pass = req_data['seller_pass']
+    seller_status = req_data['seller_status']
     
     query = 'INSERT INTO Seller (seller_id, phone_number, seller_email, street_address, city, \
-        state, zip_code, total_seller_rating, seller_first_name, seller_last_name) \
-        VALUES ("' + str(seller_id) + '", "' + str(phone_number) + '", "' + seller_email + '", "' + street_address + '", \
-            "' + city + '", "' + state + '", "' + str(zip_code) + '",  "' + seller_first_name + '",\
-                 "' + seller_last_name + '")'
+        state, zip_code, total_seller_rating, seller_first_name, seller_last_name, seller_pass, seller_status) \
+        VALUES ("' + str(seller_id) + '", "' + phone_number + '", "' + seller_email + '", "' + street_address + '", \
+            "' + city + '", "' + state + '", "' + zip_code + '",  "' + seller_first_name + '",\
+                 "' + seller_last_name + '",  "' + seller_pass + '", "' + str(seller_status) + '",)'
     
     current_app.logger.info(query)
 
