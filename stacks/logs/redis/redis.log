@@ -851,3 +851,29 @@
 1346:M 18 Apr 2023 23:07:32.382 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
 1346:M 18 Apr 2023 23:07:32.385 * DB loaded from disk: 0.002 seconds
 1346:M 18 Apr 2023 23:07:32.385 * Ready to accept connections
+1345:C 19 Apr 2023 02:27:18.103 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1345:C 19 Apr 2023 02:27:18.103 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1345, just started
+1345:C 19 Apr 2023 02:27:18.103 # Configuration loaded
+1345:M 19 Apr 2023 02:27:18.104 # Could not create server TCP listening socket ::1:6379: bind: Cannot assign requested address
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 5.0.7 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 1345
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+1345:M 19 Apr 2023 02:27:18.115 # Server initialized
+1345:M 19 Apr 2023 02:27:18.115 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1345:M 19 Apr 2023 02:27:18.120 * DB loaded from disk: 0.004 seconds
+1345:M 19 Apr 2023 02:27:18.120 * Ready to accept connections
