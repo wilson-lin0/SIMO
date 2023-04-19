@@ -59,3 +59,4 @@ def add_new_product():
     db.get_db().commit()
 
     return "Success"
+

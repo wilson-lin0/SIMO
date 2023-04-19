@@ -8,7 +8,7 @@ CREATE TABLE User (
     nuid INT PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    pass VARCHAR(15),
+    password VARCHAR(15),
     user_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1),
     INDEX `first_name` (`first_name` ASC),
     INDEX `last_name` (`last_name` ASC)
