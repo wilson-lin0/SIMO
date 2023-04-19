@@ -4,16 +4,6 @@ grant all privileges on simo.* to 'webapp'@'%';
 flush privileges;
 USE simo;
 
-CREATE TABLE User (
-    nuid INT PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    pass VARCHAR(15),
-    user_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1),
-    INDEX `first_name` (`first_name` ASC),
-    INDEX `last_name` (`last_name` ASC)
-);
-
 CREATE TABLE Buyer (
     buyer_id INT PRIMARY KEY,
     phone_number VARCHAR(12),
@@ -22,12 +12,11 @@ CREATE TABLE Buyer (
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
-    zip_code INT,
+    zip_code VARCHAR(50),
     buyer_first_name VARCHAR(50),
     buyer_last_name VARCHAR(50),
-    FOREIGN KEY (buyer_id) REFERENCES User(nuid),
-    FOREIGN KEY (buyer_first_name) REFERENCES User(first_name),
-    FOREIGN KEY (buyer_last_name) REFERENCES User(last_name)
+    buyer_pass VARCHAR(15),
+    buyer_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1),
 );
 
 CREATE TABLE Seller (
@@ -37,13 +26,12 @@ CREATE TABLE Seller (
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
-    zip_code INT,
+    zip_code VARCHAR(50),
     total_seller_rating INT,
     seller_first_name VARCHAR(50),
     seller_last_name VARCHAR(50),
-    FOREIGN KEY (seller_id) REFERENCES User(nuid),
-    FOREIGN KEY (seller_first_name) REFERENCES User(first_name),
-    FOREIGN KEY (seller_last_name) REFERENCES User(last_name)
+    seller_pass VARCHAR(15),
+    seller_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1)
 );
 
 CREATE TABLE Orders (
@@ -62,7 +50,7 @@ CREATE TABLE Meeting_Location (
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
-    zip_code INT
+    zip_code VARCHAR(50)
 );
 
 CREATE TABLE Category (
@@ -115,7 +103,7 @@ CREATE TABLE Moderator (
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
-    zip_code INT,
+    zip_code VARCHAR(50),
     FOREIGN KEY(employee_id) REFERENCES User(nuid)
 );
 

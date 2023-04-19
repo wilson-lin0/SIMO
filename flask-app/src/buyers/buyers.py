@@ -67,6 +67,6 @@ def add_new_buyer():
 
     cursor = db.get_db().cursor()
     cursor.execute(query)
-    db.get_db().comit()
+    db.get_db().commit()
 
     return "Success"

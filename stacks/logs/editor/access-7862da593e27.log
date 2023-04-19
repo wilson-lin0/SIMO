@@ -580,3 +580,15 @@ Load environment configuration
 127.0.0.1 - - [19/Apr/2023:04:27:33 +0000] "GET / HTTP/1.1" 200 4263 "-" "curl/7.68.0"
 127.0.0.1 - - [19/Apr/2023:04:27:48 +0000] "GET / HTTP/1.1" 200 4263 "-" "curl/7.68.0"
 127.0.0.1 - - [19/Apr/2023:04:28:04 +0000] "GET / HTTP/1.1" 200 4263 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:04:28:19 +0000] "GET / HTTP/1.1" 200 4263 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:04:28:34 +0000] "GET / HTTP/1.1" 200 4263 "-" "curl/7.68.0"
+Load environment configuration
+mkdir: created directory '/appsmith-stacks/data/certificate'
+mkdir: created directory '/appsmith-stacks/data/certificate/conf'
+127.0.0.1 - - [19/Apr/2023:13:23:43 +0000] "GET /rts-api/v1/health-check HTTP/1.1" 502 150 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:13:23:44 +0000] "GET /rts-api/v1/health-check HTTP/1.1" 502 150 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:13:23:45 +0000] "GET /rts-api/v1/health-check HTTP/1.1" 502 150 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:13:23:46 +0000] "GET / HTTP/1.1" 200 4263 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:13:23:46 +0000] "GET /rts-api/v1/health-check HTTP/1.1" 502 150 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:13:23:47 +0000] "GET /rts-api/v1/health-check HTTP/1.1" 502 150 "-" "curl/7.68.0"
+127.0.0.1 - - [19/Apr/2023:13:23:48 +0000] "GET /rts-api/v1/health-check HTTP/1.1" 502 150 "-" "curl/7.68.0"
