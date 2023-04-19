@@ -52,3 +52,122 @@
 2023-04-19 16:38:38.175 UTC [1445] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
 2023-04-19 16:38:41.418 UTC [1464] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
 2023-04-19 16:38:41.418 UTC [1464] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 21:39:57.654 UTC [1355] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-19 21:39:57.655 UTC [1355] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-19 21:39:57.659 UTC [1355] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-19 21:39:57.792 UTC [1381] LOG:  database system was shut down at 2023-04-19 15:30:28 UTC
+2023-04-19 21:39:57.840 UTC [1355] LOG:  database system is ready to accept connections
+2023-04-19 21:39:57.880 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:39:58.054 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:39:58.054 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:39:58.575 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:39:58.576 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:39:59.285 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:39:59.286 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:00.110 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:00.112 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:00.123 UTC [1355] LOG:  received smart shutdown request
+2023-04-19 21:40:00.143 UTC [1355] LOG:  background worker "logical replication launcher" (PID 1391) exited with exit code 1
+2023-04-19 21:40:00.841 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:00.842 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:01.599 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:01.600 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:02.411 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:02.414 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:03.235 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:03.237 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:03.950 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:03.951 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:04.666 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:04.666 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:05.391 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:05.394 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:06.104 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:06.105 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:06.817 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:06.818 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:07.536 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:07.536 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:08.244 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:08.245 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:08.942 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:08.943 UTC [1390] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:09.382 UTC [1389] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2023-04-19 21:40:09.400 UTC [1386] LOG:  shutting down
+2023-04-19 21:40:09.450 UTC [1355] LOG:  database system is shut down
+2023-04-19 21:40:55.818 UTC [1359] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-19 21:40:55.819 UTC [1359] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-19 21:40:55.830 UTC [1359] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-19 21:40:55.961 UTC [1390] LOG:  database system was shut down at 2023-04-19 21:40:09 UTC
+2023-04-19 21:40:56.099 UTC [1359] LOG:  database system is ready to accept connections
+2023-04-19 21:40:56.195 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:56.309 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:56.311 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:56.980 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:56.984 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:57.778 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:57.781 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:58.662 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:58.666 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:59.532 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:40:59.533 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:00.311 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:00.312 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:01.069 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:01.070 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:01.801 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:01.801 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:02.585 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:02.592 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:03.500 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:03.502 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:04.444 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:04.445 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:05.200 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:05.201 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:06.140 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:06.145 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:06.913 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:06.914 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:07.800 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:07.804 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:08.572 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:08.572 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:09.026 UTC [1394] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2023-04-19 21:41:09.029 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:09.030 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:09.746 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:09.747 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:10.462 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:10.463 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:11.189 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:11.189 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:11.893 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:11.894 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:12.591 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:12.591 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:13.290 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:13.291 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:13.981 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:13.981 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:14.675 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:14.675 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:15.372 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:15.375 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:16.064 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:16.065 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:16.788 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:16.789 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:17.511 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:17.512 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:18.246 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:18.246 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:18.974 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:18.977 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:19.680 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:19.680 UTC [1395] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2023-04-19 21:41:20.118 UTC [1394] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2023-04-19 21:42:16.783 UTC [1359] LOG:  received smart shutdown request
+2023-04-19 21:42:16.846 UTC [1359] LOG:  background worker "logical replication launcher" (PID 1396) exited with exit code 1
+2023-04-19 21:42:16.848 UTC [1391] LOG:  shutting down
+2023-04-19 21:42:16.955 UTC [1359] LOG:  database system is shut down

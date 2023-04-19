@@ -32,7 +32,7 @@ def get_category_products(category_id):
     return the_response
 
 # Creates a new product post
-@buyers.route('/products/new', methods=['POST'])
+@products.route('/products/new', methods=['POST'])
 def add_new_product():
     the_data = request.json
     current_app.logger.info(the_data)
