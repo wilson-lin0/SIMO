@@ -1,0 +1,332 @@
+Load environment configuration
+Waiting for RTS to start ...
+{"success":true}RTS started.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6d21714c]
+SLF4J: Found provider [org.slf4j.reload4j.Reload4jServiceProvider@108c4c35]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@6d21714c]
+[2023-04-19 15:30:32,164]  - Starting ServerApplication vv1.9.13 using Java 17.0.6 with PID 1418 (/opt/appsmith/backend/server.jar started by root in /opt/appsmith/backend)
+[2023-04-19 15:30:32,175]  - Running with Spring Boot v3.0.1, Spring v6.0.3
+[2023-04-19 15:30:32,176]  - The following 1 profile is active: "production"
+[2023-04-19 15:30:33,243]  - Multiple Spring Data modules found, entering strict repository configuration mode
+[2023-04-19 15:30:33,244]  - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+[2023-04-19 15:30:33,511]  - Finished Spring Data repository scanning in 264 ms. Found 54 Reactive MongoDB repository interfaces.
+[2023-04-19 15:30:34,450]  - Bean 'org.springframework.security.config.annotation.method.configuration.ReactiveMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.ReactiveMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-04-19 15:30:35,942]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.8.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "5.15.49-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.6+10"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@e4b6f47, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@58a2b4c], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@763cf5b9]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@15e0fe05], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+[2023-04-19 15:30:36,041]  - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:520)
+	at com.mongodb.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:488)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:27017
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-04-19 15:30:39,919]  - Enabled plugins: []
+[2023-04-19 15:30:39,921]  - Disabled plugins: []
+[2023-04-19 15:30:39,925]  - PF4J version 3.8.0 in 'deployment' mode
+[2023-04-19 15:30:40,273]  - Plugin 'postgres-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,274]  - Plugin 'saas-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,274]  - Plugin 'snowflake-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,274]  - Plugin 'elasticsearch-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,274]  - Plugin 'mssql-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'redshift-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'google-sheets-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'mongo-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'graphql-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'js-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'smtp-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'amazons3-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'mysql-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'dynamo-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'arangodb-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'restapi-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'redis-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Plugin 'firestore-plugin@1.0-SNAPSHOT' resolved
+[2023-04-19 15:30:40,275]  - Start plugin 'postgres-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,292]  - Start plugin 'saas-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,295]  - Start plugin 'snowflake-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,308]  - Start plugin 'elasticsearch-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,311]  - Start plugin 'mssql-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,327]  - Start plugin 'redshift-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,333]  - Start plugin 'google-sheets-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,432]  - Start plugin 'mongo-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,439]  - Start plugin 'graphql-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,442]  - Start plugin 'js-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,442]  - Start plugin 'smtp-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,443]  - Start plugin 'amazons3-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,445]  - Start plugin 'mysql-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,448]  - Start plugin 'dynamo-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,455]  - Start plugin 'arangodb-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,461]  - Start plugin 'restapi-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,464]  - Start plugin 'redis-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:40,466]  - Start plugin 'firestore-plugin@1.0-SNAPSHOT'
+[2023-04-19 15:30:42,841]  - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:520)
+	at com.mongodb.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:488)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:27017
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-04-19 15:30:42,853]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "5.15.49-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.6+10"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@3dc82e6a, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@58a2b4c], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@763cf5b9]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@15e0fe05], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+[2023-04-19 15:30:43,126]  - Mongock runner COMMUNITY version[5.1.6]
+[2023-04-19 15:30:43,126]  - Running Mongock with NO metadata
+[2023-04-19 15:30:43,127]  - Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired.
+[2023-04-19 15:30:43,127]  - Property transaction-enabled not provided and is unknown if driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN NO-TRANSACTION MODE.
+[2023-04-19 15:30:43,235]  - Reflections took 66 ms to scan 1 urls, producing 3 keys and 10 values
+[2023-04-19 15:30:43,268]  - Reflections took 16 ms to scan 1 urls, producing 3 keys and 10 values
+[2023-04-19 15:30:43,317]  - Cluster description not yet available. Waiting for 30000 ms before timing out
+[2023-04-19 15:30:53,519]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_GHOST, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=78199875, setName='null', canonicalAddress=null, hosts=[], passives=[], arbiters=[], primary='null', tagSet=TagSet{[]}, electionId=null, setVersion=null, topologyVersion=TopologyVersion{processId=644009156b641152b6f877af, counter=0}, lastWriteDate=null, lastUpdateTimeNanos=287664811260590}
+[2023-04-19 15:30:53,632]  - Error in mongock process. ABORTED MIGRATION
+io.mongock.api.exception.MongockException: com.mongodb.MongoNodeIsRecoveringException: Command failed with error 13436 (NotPrimaryOrSecondary): 'node is not in primary or recovering state' on server localhost:27017. The full response is {"topologyVersion": {"processId": {"$oid": "644009156b641152b6f877af"}, "counter": 0}, "ok": 0.0, "errmsg": "node is not in primary or recovering state", "code": 13436, "codeName": "NotPrimaryOrSecondary"}
+	at io.mongock.runner.core.executor.MongockRunnerImpl.execute(MongockRunnerImpl.java:67)
+	at io.mongock.runner.springboot.base.MongockInitializingBeanRunner.afterPropertiesSet(MongockInitializingBeanRunner.java:17)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:150)
+	at com.appsmith.server.ServerApplication.main(ServerApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.mongodb.MongoNodeIsRecoveringException: Command failed with error 13436 (NotPrimaryOrSecondary): 'node is not in primary or recovering state' on server localhost:27017. The full response is {"topologyVersion": {"processId": {"$oid": "644009156b641152b6f877af"}, "counter": 0}, "ok": 0.0, "errmsg": "node is not in primary or recovering state", "code": 13436, "codeName": "NotPrimaryOrSecondary"}
+	at com.mongodb.internal.connection.ProtocolHelper.createSpecialException(ProtocolHelper.java:260)
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:194)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:416)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:340)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:116)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:643)
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:71)
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:206)
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:119)
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:85)
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:75)
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:293)
+	at com.mongodb.internal.operation.CommandOperationHelper.createReadCommandAndExecute(CommandOperationHelper.java:233)
+	at com.mongodb.internal.operation.ListIndexesOperation.lambda$execute$1(ListIndexesOperation.java:133)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$0(OperationHelper.java:356)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:381)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$1(OperationHelper.java:355)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:381)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:354)
+	at com.mongodb.internal.operation.ListIndexesOperation.lambda$execute$2(ListIndexesOperation.java:130)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67)
+	at com.mongodb.internal.operation.ListIndexesOperation.execute(ListIndexesOperation.java:141)
+	at com.mongodb.internal.operation.ListIndexesOperation.execute(ListIndexesOperation.java:73)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:133)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:90)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:37)
+	at java.base/java.lang.Iterable.spliterator(Iterable.java:101)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.getResidualKeys(MongoSync4RepositoryBase.java:73)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.isIndexFine(MongoSync4RepositoryBase.java:62)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.ensureIndex(MongoSync4RepositoryBase.java:49)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.initialize(MongoSync4RepositoryBase.java:40)
+	at io.mongock.driver.core.driver.ConnectionDriverBase.initialize(ConnectionDriverBase.java:50)
+	at io.mongock.runner.core.executor.operation.migrate.MigrateExecutorBase.initializationAndValidation(MigrateExecutorBase.java:420)
+	at io.mongock.runner.core.executor.operation.migrate.MigrateExecutorBase.executeMigration(MigrateExecutorBase.java:88)
+	at io.mongock.runner.core.executor.operation.migrate.MigrateExecutorBase.executeMigration(MigrateExecutorBase.java:46)
+	at io.mongock.runner.core.executor.MongockRunnerImpl.execute(MongockRunnerImpl.java:53)
+	... 26 common frames omitted
+[2023-04-19 15:30:53,640]  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongockInitializingBeanRunner' defined in class path resource [com/appsmith/server/configurations/MongoConfig.class]: com.mongodb.MongoNodeIsRecoveringException: Command failed with error 13436 (NotPrimaryOrSecondary): 'node is not in primary or recovering state' on server localhost:27017. The full response is {"topologyVersion": {"processId": {"$oid": "644009156b641152b6f877af"}, "counter": 0}, "ok": 0.0, "errmsg": "node is not in primary or recovering state", "code": 13436, "codeName": "NotPrimaryOrSecondary"}
+[2023-04-19 15:30:53,657]  - Operator called default onErrorDropped
+reactor.core.Exceptions$ErrorCallbackNotImplemented: java.util.concurrent.CancellationException: Disconnected
+Caused by: java.util.concurrent.CancellationException: Disconnected
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.disconnectAction(FluxPublish.java:327)
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.dispose(FluxPublish.java:318)
+	at org.springframework.data.redis.connection.lettuce.LettuceReactiveSubscription$State.terminate(LettuceReactiveSubscription.java:263)
+	at org.springframework.data.redis.connection.lettuce.LettuceReactiveSubscription.lambda$cancel$8(LettuceReactiveSubscription.java:147)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:44)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:240)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:209)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:238)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:896)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:698)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:608)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:565)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:326)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:341)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:778)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:65)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:63)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:747)
+	at io.lettuce.core.pubsub.PubSubCommandHandler.complete(PubSubCommandHandler.java:167)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:682)
+	at io.lettuce.core.pubsub.PubSubCommandHandler.decode(PubSubCommandHandler.java:112)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:599)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-04-19 15:30:57,791]  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-04-19 15:30:57,830]  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongockInitializingBeanRunner' defined in class path resource [com/appsmith/server/configurations/MongoConfig.class]: com.mongodb.MongoNodeIsRecoveringException: Command failed with error 13436 (NotPrimaryOrSecondary): 'node is not in primary or recovering state' on server localhost:27017. The full response is {"topologyVersion": {"processId": {"$oid": "644009156b641152b6f877af"}, "counter": 0}, "ok": 0.0, "errmsg": "node is not in primary or recovering state", "code": 13436, "codeName": "NotPrimaryOrSecondary"}
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:150)
+	at com.appsmith.server.ServerApplication.main(ServerApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: io.mongock.api.exception.MongockException: com.mongodb.MongoNodeIsRecoveringException: Command failed with error 13436 (NotPrimaryOrSecondary): 'node is not in primary or recovering state' on server localhost:27017. The full response is {"topologyVersion": {"processId": {"$oid": "644009156b641152b6f877af"}, "counter": 0}, "ok": 0.0, "errmsg": "node is not in primary or recovering state", "code": 13436, "codeName": "NotPrimaryOrSecondary"}
+	at io.mongock.runner.core.executor.MongockRunnerImpl.execute(MongockRunnerImpl.java:67)
+	at io.mongock.runner.springboot.base.MongockInitializingBeanRunner.afterPropertiesSet(MongockInitializingBeanRunner.java:17)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 23 common frames omitted
+Caused by: com.mongodb.MongoNodeIsRecoveringException: Command failed with error 13436 (NotPrimaryOrSecondary): 'node is not in primary or recovering state' on server localhost:27017. The full response is {"topologyVersion": {"processId": {"$oid": "644009156b641152b6f877af"}, "counter": 0}, "ok": 0.0, "errmsg": "node is not in primary or recovering state", "code": 13436, "codeName": "NotPrimaryOrSecondary"}
+	at com.mongodb.internal.connection.ProtocolHelper.createSpecialException(ProtocolHelper.java:260)
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:194)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:416)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:340)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:116)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:643)
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:71)
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:206)
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:119)
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:85)
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:75)
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:293)
+	at com.mongodb.internal.operation.CommandOperationHelper.createReadCommandAndExecute(CommandOperationHelper.java:233)
+	at com.mongodb.internal.operation.ListIndexesOperation.lambda$execute$1(ListIndexesOperation.java:133)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$0(OperationHelper.java:356)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:381)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$1(OperationHelper.java:355)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:381)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:354)
+	at com.mongodb.internal.operation.ListIndexesOperation.lambda$execute$2(ListIndexesOperation.java:130)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67)
+	at com.mongodb.internal.operation.ListIndexesOperation.execute(ListIndexesOperation.java:141)
+	at com.mongodb.internal.operation.ListIndexesOperation.execute(ListIndexesOperation.java:73)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:133)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:90)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:37)
+	at java.base/java.lang.Iterable.spliterator(Iterable.java:101)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.getResidualKeys(MongoSync4RepositoryBase.java:73)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.isIndexFine(MongoSync4RepositoryBase.java:62)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.ensureIndex(MongoSync4RepositoryBase.java:49)
+	at io.mongock.driver.mongodb.sync.v4.repository.MongoSync4RepositoryBase.initialize(MongoSync4RepositoryBase.java:40)
+	at io.mongock.driver.core.driver.ConnectionDriverBase.initialize(ConnectionDriverBase.java:50)
+	at io.mongock.runner.core.executor.operation.migrate.MigrateExecutorBase.initializationAndValidation(MigrateExecutorBase.java:420)
+	at io.mongock.runner.core.executor.operation.migrate.MigrateExecutorBase.executeMigration(MigrateExecutorBase.java:88)
+	at io.mongock.runner.core.executor.operation.migrate.MigrateExecutorBase.executeMigration(MigrateExecutorBase.java:46)
+	at io.mongock.runner.core.executor.MongockRunnerImpl.execute(MongockRunnerImpl.java:53)
+	... 26 common frames omitted
