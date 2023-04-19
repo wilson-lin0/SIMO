@@ -25,7 +25,7 @@ def get_buyers():
 @buyers.route('/buyers/<buyer_id>', methods=['GET'])
 def get_buyers_id(buyer_id):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from Buyer where buyer_id = {0}'.format(buyer_id))
+    cursor.execute('select * from Buyer where buyer_id = buyer_id'.format(buyer_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()

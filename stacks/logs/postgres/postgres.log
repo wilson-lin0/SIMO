@@ -6,3 +6,49 @@
 2023-04-19 15:30:34.654 UTC [1488] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
 2023-04-19 15:30:38.270 UTC [1497] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
 2023-04-19 15:30:38.270 UTC [1497] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:00.306 UTC [1358] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:00.306 UTC [1358] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:01.903 UTC [1413] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:01.903 UTC [1413] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:04.186 UTC [1424] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:04.186 UTC [1424] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:07.569 UTC [1436] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:07.569 UTC [1436] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:36.675 UTC [1361] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:36.675 UTC [1361] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:38.027 UTC [1414] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:38.027 UTC [1414] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:40.248 UTC [1425] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:40.248 UTC [1425] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:24:43.548 UTC [1439] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:24:43.548 UTC [1439] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:31:06.726 UTC [1356] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:31:06.726 UTC [1356] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:31:08.101 UTC [1414] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:31:08.101 UTC [1414] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:31:10.976 UTC [1425] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:31:10.976 UTC [1425] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:31:15.335 UTC [1436] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:31:15.335 UTC [1436] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:34:15.666 UTC [1356] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:34:15.666 UTC [1356] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:34:17.269 UTC [1414] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:34:17.269 UTC [1414] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:34:19.762 UTC [1425] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:34:19.762 UTC [1425] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:34:23.763 UTC [1436] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:34:23.763 UTC [1436] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:29.518 UTC [1355] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:29.518 UTC [1355] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:31.044 UTC [1413] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:31.044 UTC [1413] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:33.360 UTC [1424] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:33.360 UTC [1424] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:34.473 UTC [1425] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:34.473 UTC [1425] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:35.584 UTC [1429] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:35.584 UTC [1429] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:38.175 UTC [1445] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:38.175 UTC [1445] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2023-04-19 16:38:41.418 UTC [1464] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has invalid permissions
+2023-04-19 16:38:41.418 UTC [1464] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).

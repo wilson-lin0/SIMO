@@ -142,7 +142,7 @@ INSERT INTO Category (category_id,description,name) VALUES
 (3,"technological devices (ie appliances)","technology"),
 (4,"other","other");
 
-INSERT INTO Product (product_id, name, description, price, category_id, condition_type, seller_id) VALUES 
+INSERT INTO Products (product_id, name, description, price, category_id, condition_type, seller_id) VALUES 
 (1,"Kellogs Cereal In A Cup","Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.","$9.73",2,"worn out",43),
 (2,"Cheese Cheddar Processed","Aliquam sit amet diam in magna bibendum imperdiet.","$1.16",1,"worn out",34),
 (3,"Lemonade - Natural, 591 Ml","Maecenas tincidunt lacus at velit.","$8.43",3,"new",44),
