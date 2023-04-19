@@ -16,7 +16,7 @@ CREATE TABLE User (
 
 CREATE TABLE Buyer (
     buyer_id INT PRIMARY KEY,
-    phone_number INT,
+    phone_number VARCHAR(12),
     buyer_email VARCHAR(100),
     total_buyer_rating INT,
     street_address VARCHAR(100),
@@ -32,7 +32,7 @@ CREATE TABLE Buyer (
 
 CREATE TABLE Seller (
     seller_id INT PRIMARY KEY,
-    phone_number INT,
+    phone_number VARCHAR(12),
     seller_email VARCHAR(100),
     street_address VARCHAR(100),
     city VARCHAR(50),
@@ -75,7 +75,7 @@ CREATE TABLE Product (
     product_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name VARCHAR(100),
     description TEXT,
-    price DOUBLE,
+    price VARCHAR(10),
     category_id INT,
     condition_type VARCHAR(50),
     seller_id INT,
@@ -111,7 +111,7 @@ CREATE TABLE Moderator (
     employee_id INT PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    phone_number INT,
+    phone_number VARCHAR(12),
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
