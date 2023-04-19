@@ -37,7 +37,7 @@ def get_sellers_id(seller_id):
 
 # Get seller detail for seller with particular first name
 @sellers.route('/sellers/first-name/<seller_first_name>', methods=['GET'])
-def get_sellers_id(seller_first_name):
+def get_sellers_first_name(seller_first_name):
     cursor = db.get_db().cursor()
     cursor.execute('select * from Seller where seller_first_name = {0}'.format(seller_first_name))
     row_headers = [x[0] for x in cursor.description]
@@ -52,7 +52,7 @@ def get_sellers_id(seller_first_name):
 
 # Get seller detail for seller with particular last name
 @sellers.route('/sellers/last-name/<seller_last_name>', methods=['GET'])
-def get_sellers_id(seller_last_name):
+def get_sellers_last_name(seller_last_name):
     cursor = db.get_db().cursor()
     cursor.execute('select * from Seller where seller_last_name = {0}'.format(seller_last_name))
     row_headers = [x[0] for x in cursor.description]
@@ -67,7 +67,7 @@ def get_sellers_id(seller_last_name):
 
 # Get seller detail for seller with particular userID
 @sellers.route('/sellers/street_address/<street_address>', methods=['GET'])
-def get_sellers_id(street_address):
+def get_sellers_street_address(street_address):
     cursor = db.get_db().cursor()
     cursor.execute('select * from Seller where street_address = {0}'.format(street_address))
     row_headers = [x[0] for x in cursor.description]

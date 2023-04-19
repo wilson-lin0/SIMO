@@ -52,7 +52,7 @@ def add_new_buyer():
     buyer_first_name = the_data['buyer_first_name']
     buyer_last_name = the_data['buyer_last_name']
 
-    query = 'insert into buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name) values ('
+    query = 'insert into Buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name) values ("'
     query += str(buyer_id) + '", "'
     query += str(phone_number) + '", "'
     query += buyer_email + '", "'
@@ -61,12 +61,12 @@ def add_new_buyer():
     query += state + '", "'
     query += str(zip_code) + '", "'
     query += buyer_first_name + '", "'
-    query += buyer_last_name + ')'
+    query += buyer_last_name + '")'
 
     current_app.logger.info(query)
 
     cursor = db.get_db().cursor()
     cursor.execute(query)
-    db.get_db().comit()
+    db.get_db().commit()
 
     return "Success"

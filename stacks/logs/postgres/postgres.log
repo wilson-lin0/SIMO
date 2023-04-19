@@ -233,3 +233,29 @@
 2023-04-19 02:24:03.925 UTC [1449] HINT:  The server must be started by the user that owns the data directory.
 2023-04-19 02:24:07.154 UTC [1456] FATAL:  data directory "/appsmith-stacks/data/postgres/main" has wrong ownership
 2023-04-19 02:24:07.154 UTC [1456] HINT:  The server must be started by the user that owns the data directory.
+2023-04-19 13:24:50.787 UTC [1418] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-19 13:24:50.787 UTC [1418] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-19 13:24:50.790 UTC [1418] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-19 13:24:50.833 UTC [1440] LOG:  database system was shut down at 2023-04-19 13:24:49 UTC
+2023-04-19 13:24:50.854 UTC [1418] LOG:  database system is ready to accept connections
+2023-04-19 13:25:31.742 UTC [1418] LOG:  received smart shutdown request
+2023-04-19 13:25:31.752 UTC [1582] FATAL:  terminating autovacuum process due to administrator command
+2023-04-19 13:25:31.752 UTC [1418] LOG:  background worker "logical replication launcher" (PID 1448) exited with exit code 1
+2023-04-19 13:25:31.756 UTC [1443] LOG:  shutting down
+2023-04-19 13:25:31.862 UTC [1418] LOG:  database system is shut down
+2023-04-19 13:26:27.552 UTC [1359] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-19 13:26:27.557 UTC [1359] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-19 13:26:27.565 UTC [1359] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-19 13:26:27.634 UTC [1390] LOG:  database system was shut down at 2023-04-19 13:25:31 UTC
+2023-04-19 13:26:27.671 UTC [1359] LOG:  database system is ready to accept connections
+2023-04-19 13:27:46.058 UTC [1359] LOG:  received smart shutdown request
+2023-04-19 13:27:46.094 UTC [1359] LOG:  background worker "logical replication launcher" (PID 1396) exited with exit code 1
+2023-04-19 13:27:46.094 UTC [1391] LOG:  shutting down
+2023-04-19 13:27:46.226 UTC [1359] LOG:  database system is shut down
+2023-04-19 13:28:00.866 UTC [1356] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-19 13:28:00.867 UTC [1356] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-19 13:28:00.873 UTC [1356] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-19 13:28:00.945 UTC [1389] LOG:  database system was shut down at 2023-04-19 13:27:46 UTC
+2023-04-19 13:28:00.991 UTC [1356] LOG:  database system is ready to accept connections
+2023-04-19 13:32:21.239 UTC [1700] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
+2023-04-19 13:40:21.407 UTC [1393] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
