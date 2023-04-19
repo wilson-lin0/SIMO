@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, make_response
+from flask import Blueprint, request, jsonify, make_response, current_app
 import json
 from src import db
 
@@ -35,3 +35,38 @@ def get_buyers_id(buyer_id):
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
     return the_response
+
+# Creates a new buyer account
+@buyers.route('/buyers/make', methods=['POST'])
+def add_new_buyer():
+    the_data = request.json
+    current_app.logger.info(the_data)
+
+    buyer_id = the_data['buyer_id']
+    phone_number = the_data['phone_number']
+    buyer_email = the_data['buyer_email']
+    street_address = the_data['street_address']
+    city = the_data['city']
+    state = the_data['state']
+    zip_code = the_data['zip_code']
+    buyer_first_name = the_data['buyer_first_name']
+    buyer_last_name = the_data['buyer_last_name']
+
+    query = 'insert into buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name) values ('
+    query += str(buyer_id) + '", "'
+    query += str(phone_number) + '", "'
+    query += buyer_email + '", "'
+    query += street_address + '", "'
+    query += city + '", "'
+    query += state + '", "'
+    query += str(zip_code) + '", "'
+    query += buyer_first_name + '", "'
+    query += buyer_last_name + ')'
+
+    current_app.logger.info(query)
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().comit()
+
+    return "Success"
