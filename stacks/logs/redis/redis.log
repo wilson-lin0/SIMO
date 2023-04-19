@@ -1007,3 +1007,9 @@
 1344:M 19 Apr 2023 13:27:51.683 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
 1344:M 19 Apr 2023 13:27:51.698 * DB loaded from disk: 0.013 seconds
 1344:M 19 Apr 2023 13:27:51.698 * Ready to accept connections
+1344:signal-handler (1681913644) Received SIGTERM scheduling shutdown...
+1344:M 19 Apr 2023 14:14:04.590 # User requested shutdown...
+1344:M 19 Apr 2023 14:14:04.594 * Saving the final RDB snapshot before exiting.
+1344:M 19 Apr 2023 14:14:04.624 * DB saved on disk
+1344:M 19 Apr 2023 14:14:04.624 * Removing the pid file.
+1344:M 19 Apr 2023 14:14:04.624 # Redis is now ready to exit, bye bye...

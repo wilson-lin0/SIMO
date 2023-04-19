@@ -33,3 +33,22 @@ fs.writeFileSync("/opt/appsmith/editor/index.html", content)
 2023/04/19 13:27:51 [notice] 1356#1356: start worker process 1385
 2023/04/19 13:27:51 [notice] 1356#1356: start worker process 1386
 2023/04/19 13:27:51 [notice] 1356#1356: start worker process 1387
+2023/04/19 14:13:56 [notice] 1356#1356: signal 3 (SIGQUIT) received from 1, shutting down
+2023/04/19 14:13:56 [notice] 1384#1384: gracefully shutting down
+2023/04/19 14:13:56 [notice] 1384#1384: exiting
+2023/04/19 14:13:56 [notice] 1385#1385: gracefully shutting down
+2023/04/19 14:13:56 [notice] 1385#1385: exiting
+2023/04/19 14:13:56 [notice] 1387#1387: gracefully shutting down
+2023/04/19 14:13:56 [notice] 1387#1387: exiting
+2023/04/19 14:13:56 [notice] 1386#1386: gracefully shutting down
+2023/04/19 14:13:56 [notice] 1386#1386: exiting
+2023/04/19 14:13:56 [notice] 1385#1385: exit
+2023/04/19 14:13:56 [notice] 1384#1384: exit
+2023/04/19 14:13:56 [notice] 1387#1387: exit
+2023/04/19 14:13:56 [notice] 1386#1386: exit
+2023/04/19 14:13:56 [notice] 1356#1356: signal 17 (SIGCHLD) received from 1386
+2023/04/19 14:13:56 [notice] 1356#1356: worker process 1384 exited with code 0
+2023/04/19 14:13:56 [notice] 1356#1356: worker process 1385 exited with code 0
+2023/04/19 14:13:56 [notice] 1356#1356: worker process 1386 exited with code 0
+2023/04/19 14:13:56 [notice] 1356#1356: worker process 1387 exited with code 0
+2023/04/19 14:13:56 [notice] 1356#1356: exit
