@@ -16,7 +16,7 @@ CREATE TABLE Buyer (
     buyer_first_name VARCHAR(50),
     buyer_last_name VARCHAR(50),
     buyer_pass VARCHAR(15),
-    buyer_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1),
+    buyer_status INT CHECK (buyer_status=0 OR buyer_status=1) DEFAULT (1)
 );
 
 CREATE TABLE Seller (
@@ -31,7 +31,7 @@ CREATE TABLE Seller (
     seller_first_name VARCHAR(50),
     seller_last_name VARCHAR(50),
     seller_pass VARCHAR(15),
-    seller_status INT CHECK (user_status=0 OR user_status=1) DEFAULT (1)
+    seller_status INT CHECK (seller_status=0 OR seller_status=1) DEFAULT (1)
 );
 
 CREATE TABLE Orders (
