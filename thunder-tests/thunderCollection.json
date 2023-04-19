@@ -1,9 +1,79 @@
-[
-  {
-    "_id": "cd143d75-fd2b-4039-a514-cd7a5005de02",
-    "colName": "Simple Requests",
-    "created": "2023-03-29T12:08:58.256Z",
-    "sortNum": 10000,
-    "folders": []
-  }
-]
+{
+    "client": "Thunder Client",
+    "collectionName": "Seller Information",
+    "dateExported": "2023-04-19T02:07:45.261Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "43592df7-ac2e-4b31-8a52-e7f788ee1fda",
+            "colId": "15d5b275-f446-4b2d-a3bc-9a0c689e12b0",
+            "containerId": "",
+            "name": "Seller ID 0",
+            "url": "localhost:8001/s/sellers/0",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-19T02:01:55.331Z",
+            "modified": "2023-04-19T02:01:55.331Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c6f9bb5b-ebff-4d3c-bb80-6a6daaf031dd",
+            "colId": "15d5b275-f446-4b2d-a3bc-9a0c689e12b0",
+            "containerId": "",
+            "name": "Seller ID 1",
+            "url": "localhost:8001/s/sellers/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-19T02:03:27.834Z",
+            "modified": "2023-04-19T02:03:52.645Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "394c238b-38d4-4ead-be86-aa881a636bcf",
+            "colId": "15d5b275-f446-4b2d-a3bc-9a0c689e12b0",
+            "containerId": "",
+            "name": "Seller ID 2",
+            "url": "localhost:8001/s/sellers/2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-04-19T02:04:07.393Z",
+            "modified": "2023-04-19T02:04:13.591Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1af6c160-d47c-4df4-b9c3-3ec0432408ff",
+            "colId": "15d5b275-f446-4b2d-a3bc-9a0c689e12b0",
+            "containerId": "",
+            "name": "Seller ID 3",
+            "url": "localhost:8001/s/sellers/3",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-04-19T02:04:37.159Z",
+            "modified": "2023-04-19T02:04:41.418Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5b4a742c-c8c8-46b6-a7fb-f9bd17a84d54",
+            "colId": "15d5b275-f446-4b2d-a3bc-9a0c689e12b0",
+            "containerId": "",
+            "name": "Seller ID 4",
+            "url": "localhost:8001/s/sellers/4",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-04-19T02:04:56.767Z",
+            "modified": "2023-04-19T02:05:03.073Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
