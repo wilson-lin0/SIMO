@@ -9,7 +9,7 @@ sellers = Blueprint('sellers', __name__)
 def get_sellers():
     cursor = db.get_db().cursor()
     cursor.execute('select seller_first_name, seller_last_name,\
-        phone_number, seller_email, total_seller_rating from Seller')
+        phone_number, seller_email from Seller')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -81,7 +81,7 @@ def get_sellers_street_address(street_address):
     return the_response
 
 # Makes a new seller
-@sellers.route('/seller', methods=['POST'])
+@sellers.route('/sellers', methods=['POST'])
 def add_new_seller():
     cursor = db.get_db().cursor()
     req_data = request.get_json()
@@ -94,14 +94,13 @@ def add_new_seller():
     city = req_data['city']
     state = req_data['state']
     zip_code = req_data['zip_code']
-    total_seller_rating = req_data['total_seller_rating']
     seller_first_name = req_data['seller_first_name']
     seller_last_name = req_data['seller_last_name']
     
     query = 'INSERT INTO Seller (seller_id, phone_number, seller_email, street_address, city, \
-        state, zip_code, total_seller_rating, seller_first_name, seller_last_name) \
+        state, zip_code, seller_first_name, seller_last_name) \
         VALUES ("' + str(seller_id) + '", "' + phone_number + '", "' + seller_email + '", "' + street_address + '", \
-            "' + city + '", "' + state + '", "' + zip_code + '",  "' + str(total_seller_rating) + '", "' + seller_first_name + '",\
+            "' + city + '", "' + state + '", "' + zip_code + '",  "' + seller_first_name + '",\
                  "' + seller_last_name + '")'
     
     current_app.logger.info(query)
@@ -111,7 +110,7 @@ def add_new_seller():
     return "Success"
 
 # Updates a seller
-@sellers.route('/seller', methods=['PUT'])
+@sellers.route('/sellers', methods=['PUT'])
 def update_seller():
     cursor = db.get_db().cursor()
     req_data = request.get_json()
@@ -124,14 +123,13 @@ def update_seller():
     city = req_data['city']
     state = req_data['state']
     zip_code = req_data['zip_code']
-    total_seller_rating = req_data['total_seller_rating']
     seller_first_name = req_data['seller_first_name']
     seller_last_name = req_data['seller_last_name']
     
     query = 'UPDATE INTO Seller (seller_id, phone_number, seller_email, street_address, city, \
-        state, zip_code, total_seller_rating, seller_first_name, seller_last_name) \
+        state, zip_code, seller_first_name, seller_last_name) \
         VALUES ("' + str(seller_id) + '", "' + phone_number + '", "' + seller_email + '", "' + street_address + '", \
-            "' + city + '", "' + state + '", "' + zip_code + '",  "' + str(total_seller_rating) + '", "' + seller_first_name + '",\
+            "' + city + '", "' + state + '", "' + zip_code + '", "' + seller_first_name + '",\
                  "' + seller_last_name + '")'
     
     current_app.logger.info(query)
@@ -140,7 +138,7 @@ def update_seller():
     db.get_db().commit()
     return "Success"
 
-# Delete thr seller with particular userID
+# Delete the seller with particular userID
 @sellers.route('/sellers/<seller_id>', methods=['DELETE'])
 def delete_seller(seller_id):
     cursor = db.get_db().cursor()
