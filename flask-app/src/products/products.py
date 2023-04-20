@@ -4,11 +4,11 @@ from src import db
 
 products = Blueprint('products', __name__)
 
-# Get all the products from the database
+# Get all the products sorted by alphabet
 @products.route('/products', methods=['GET'])
 def get_user():
     cursor = db.get_db().cursor()
-    cursor.execute('select * from Products')
+    cursor.execute('select * from Products order by product_name asc')
     column_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -20,7 +20,7 @@ def get_user():
 @products.route('/products/<category_id>', methods=['GET'])
 def get_category_products(category_id):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from Products where category_id = category_id'.format(category_id))
+    cursor.execute('select * from Products where category_id = {0}'.format(category_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -60,10 +60,90 @@ def add_new_product():
 
     return "Success"
 
+
 @products.route('/products/delete/<product_id>', methods=['DELETE'])
 def delete_product(product_id):
     cursor = db.get_db().cursor()
-    cursor.execute('delete from Products where product_id = product_id'.format(product_id))
+    cursor.execute('delete from Products where product_id = {0}'.format(product_id))
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(row_headers, row)))
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+
+# Updates a product price
+@products.route('/put-new-price/<product_id>/<price>', methods=['PUT'])
+def update_seller(product_id, price):
+    cursor = db.get_db().cursor()
+    req_data = request.get_json()
+    current_app.logger.info(req_data)
+
+    query = 'UPDATE Products SET price = "' + price + '" WHERE product_id = ' + str(product_id)
+    
+    current_app.logger.info(query)
+
+    cursor.execute(query)
+    db.get_db().commit()
+    return "Success"
+
+# Delete the seller with particular userID
+@products.route('/products/<product_id>', methods=['DELETE'])
+def delete_seller(product_id):
+    cursor = db.get_db().cursor()
+    cursor.execute('DELETE * from Products where product_id = {0}'.format(product_id))
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(row_headers, row)))
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+# Creates a new request post
+@products.route('/request/new', methods=['POST'])
+def add_new_request():
+    the_data = request.json
+    current_app.logger.info(the_data)
+
+    request_id = the_data['request_id']
+    nuid = the_data['nuid']
+    request_name = the_data['request_name']
+    category_id = the_data['category_id']
+    condition_type = the_data['condition_type']
+    description = the_data['description']
+    upper_price_range = the_data['upper_price_range']
+    lower_price_range = the_data['lower_price_range']
+
+    query = 'insert into Requests (request_id, nuid, request_name, category_id, condition_type, description, upper_price_range, lower_price_range) values ("'
+    query += str(request_id) + '", "'
+    query += str(nuid) + '", "'
+    query += request_name + '", "'
+    query += str(category_id) + '", "'
+    query += condition_type + '", "'
+    query += description + '","'
+    query += upper_price_range + '", "'
+    query += lower_price_range + '")'
+
+    current_app.logger.info(query)
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    return "Success"
+
+# get requests
+@products.route('/requests', methods=['GET'])
+def get_requests():
+    cursor = db.get_db().cursor()
+    cursor.execute('select * from Requests')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
