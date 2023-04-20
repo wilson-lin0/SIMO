@@ -57,8 +57,8 @@ CREATE TABLE Orders (
 
 CREATE TABLE Category (
     category_id INT PRIMARY KEY,
-    description TEXT,
-    name VARCHAR(100)
+    description VARCHAR(5000),
+    category_name VARCHAR(100)
 );
 
 CREATE TABLE Products (
@@ -86,7 +86,7 @@ CREATE TABLE Order_Details (
 CREATE TABLE Requests (
     request_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     nuid INT,
-    name VARCHAR(100),
+    request_name VARCHAR(100),
     category_id INT,
     condition_type VARCHAR(50),
     description VARCHAR(5000),
@@ -181,33 +181,33 @@ VALUES
 (49,'Yoshiko','Spiaggia','pSduy8',1),
 (50,'Alica','Storror','alp3GQFR7D',1);
 
-INSERT INTO Buyer (buyer_id, phone_number, buyer_email, total_buyer_rating, street_address, city, state, zip_code, buyer_first_name, buyer_last_name)
+INSERT INTO Buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name)
 VALUES
-(1,'312-725-3509','edibbe0@cdc.gov',6,'86 Darwin Street','Chicago','IL',60614,'Gael','Heyworth'),
-(2,'813-919 2669','ldionisetto1@stumbleupon.com',10,'2590 Oak Valley Crossing','Tampa','FL',33615,'Henrie','Farrear'),
-(3,'505-145-0662','rpowles2@tmall.com',6,'9 Crownhardt Plaza','Albuquerque','NM',87105,'Aldis','Cashell'),
-(4,'941-449-1626','gchallenor3@scribd.com',8,'27661 8th Court','PortCharlotte','FL',33954,'Gun','Clarridge'),
-(5,'215-603-5817','pderisley4@statcounter.com',9,'290 Mallory Crossing','Philadelphia','PA',19151,'Rozelle','Vannet'),
-(6,'407-317-5233','omchirrie5@wp.com',10,'2 Scott Circle','Orlando','FL',32859,'Alejandro','Parris'),
-(7,'202-413-8160','dwalder6@blog.com',1,'90 Center Lane','Washington','DC',20205,'Renelle','Blackah'),
-(8,'505-652-8422','edyhouse7@google.fr',9,'918 Heath Terrace','Albuquerque','NM',87201,'Mead','Beazer'),
-(9,'509-664-2325','kcrichmere8@woothemes.com',2,'80 Welch Terrace','Spokane','WA',99210,'Candi','Gillcrist'),
-(10,'309-243-9607','dmacandrew9@geocities.jp',2,'3 Sunbrook Point','Peoria','IL',61640,'Torre','Petrolli'),
-(11,'304-917-0240','abraddera@liveinternet.ru',10,'92 Morningstar Hill','Huntington','WV',25726,'Wilek','Aggus'),
-(12,'503-548-6010','nilyuninb@com.com',7,'4 Forster Pass','Beaverton','OR',97075,'Carmencita','Ivanyutin'),
-(13,'912-796-9469','dhannigerc@geocities.com',7,'68 Maryland Trail','Savannah','GA',31422,'Karel','Gurge'),
-(14,'419-554-6920','mcessfordd@shutterfly.com',2,'245 Blue Bill Park Road','Toledo','OH',43666,'Shoshanna','Winning'),
-(15,'831-532-8419','dfarrese@telegraph.co.uk',9,'3637 Londonderry Park','Salinas','CA',93907,'Katrinka','Insull'),
-(16,'909-596-1423','jbandef@cdbaby.com',4,'6547 Kennedy Plaza','San Bernardino','CA',92415,'Ozzie','Grundy'),
-(17,'415-148-4721','gfishlyg@example.com',3,'81045 Porter Park','San Francisco','CA',94137,'Janifer','Aland'),
-(18,'304-204-7988','zglazierh@sakura.ne.jp',10,'6 Blue Bill Park Avenue','Charleston','WV',25331,'Clifford','Hake'),
-(19,'602-149-4219','hjershi@symantec.com',1,'3195 Anniversary Circle','Phoenix','AZ',85015,'Yvon','Partridge'),
-(20,'323-633-4856','cnesterovj@apache.org',8,'36170 Fisk Trail','Los Angeles','CA',90060,'Toby','Winslow'),
-(21,'816-858-8829','cclarridgek@mit.edu',2,'978 Commercial Trail','Kansas City','MO',64125,'Orel','Gilfillan'),
-(22,'540-923-9248','mmallabarl@parallels.com',1,'21 Dottie Plaza','Roanoke','VA',24029,'Bernie','Nerne'),
-(23,'813-314-0370','kmuggm@blogspot.com',1,'8 Montana Hill','Tampa','FL',33605,'Angelico','Skelding'),
-(24,'713-521-7282','mmarshmann@sina.com.cn',5,'87497 Larry Pass','Houston','TX',77245,'Bernhard','Baughan'),
-(25,'817-787-8751','kboultwoodo@cnbc.com',6,'0983 Raven Terrace','Fort Worth','TX',76121,'Joyce','Grabeham');
+(1,'312-725-3509','edibbe0@cdc.gov','86 Darwin Street','Chicago','IL',60614,'Gael','Heyworth'),
+(2,'813-919 2669','ldionisetto1@stumbleupon.com','2590 Oak Valley Crossing','Tampa','FL',33615,'Henrie','Farrear'),
+(3,'505-145-0662','rpowles2@tmall.com','9 Crownhardt Plaza','Albuquerque','NM',87105,'Aldis','Cashell'),
+(4,'941-449-1626','gchallenor3@scribd.com','27661 8th Court','PortCharlotte','FL',33954,'Gun','Clarridge'),
+(5,'215-603-5817','pderisley4@statcounter.com','290 Mallory Crossing','Philadelphia','PA',19151,'Rozelle','Vannet'),
+(6,'407-317-5233','omchirrie5@wp.com','2 Scott Circle','Orlando','FL',32859,'Alejandro','Parris'),
+(7,'202-413-8160','dwalder6@blog.com','90 Center Lane','Washington','DC',20205,'Renelle','Blackah'),
+(8,'505-652-8422','edyhouse7@google.fr','918 Heath Terrace','Albuquerque','NM',87201,'Mead','Beazer'),
+(9,'509-664-2325','kcrichmere8@woothemes.com','80 Welch Terrace','Spokane','WA',99210,'Candi','Gillcrist'),
+(10,'309-243-9607','dmacandrew9@geocities.jp','3 Sunbrook Point','Peoria','IL',61640,'Torre','Petrolli'),
+(11,'304-917-0240','abraddera@liveinternet.ru','92 Morningstar Hill','Huntington','WV',25726,'Wilek','Aggus'),
+(12,'503-548-6010','nilyuninb@com.com','4 Forster Pass','Beaverton','OR',97075,'Carmencita','Ivanyutin'),
+(13,'912-796-9469','dhannigerc@geocities.com','68 Maryland Trail','Savannah','GA',31422,'Karel','Gurge'),
+(14,'419-554-6920','mcessfordd@shutterfly.com','245 Blue Bill Park Road','Toledo','OH',43666,'Shoshanna','Winning'),
+(15,'831-532-8419','dfarrese@telegraph.co.uk','3637 Londonderry Park','Salinas','CA',93907,'Katrinka','Insull'),
+(16,'909-596-1423','jbandef@cdbaby.com','6547 Kennedy Plaza','San Bernardino','CA',92415,'Ozzie','Grundy'),
+(17,'415-148-4721','gfishlyg@example.com','81045 Porter Park','San Francisco','CA',94137,'Janifer','Aland'),
+(18,'304-204-7988','zglazierh@sakura.ne.jp','6 Blue Bill Park Avenue','Charleston','WV',25331,'Clifford','Hake'),
+(19,'602-149-4219','hjershi@symantec.com','3195 Anniversary Circle','Phoenix','AZ',85015,'Yvon','Partridge'),
+(20,'323-633-4856','cnesterovj@apache.org','36170 Fisk Trail','Los Angeles','CA',90060,'Toby','Winslow'),
+(21,'816-858-8829','cclarridgek@mit.edu','978 Commercial Trail','Kansas City','MO',64125,'Orel','Gilfillan'),
+(22,'540-923-9248','mmallabarl@parallels.com','21 Dottie Plaza','Roanoke','VA',24029,'Bernie','Nerne'),
+(23,'813-314-0370','kmuggm@blogspot.com','8 Montana Hill','Tampa','FL',33605,'Angelico','Skelding'),
+(24,'713-521-7282','mmarshmann@sina.com.cn','87497 Larry Pass','Houston','TX',77245,'Bernhard','Baughan'),
+(25,'817-787-8751','kboultwoodo@cnbc.com','0983 Raven Terrace','Fort Worth','TX',76121,'Joyce','Grabeham');
 
 INSERT INTO Seller (seller_id,phone_number,seller_email,street_address,city,state,zip_code,seller_first_name,seller_last_name) VALUES
 (26,'763-454-2568','mhubatsch0@upenn.edu','75063 Memorial Court','Monticello','MN',55565,'Bernelle','Fleisch'),
@@ -258,7 +258,7 @@ INSERT INTO Orders (order_id, date, buyer_id, seller_id, total_price, seller_rat
 (19,'2022-05-30 13:55:00',18,49,'$8.29',4),
 (20,'2022-06-16 18:05:00',8,48,'$133.51',10);
 
-INSERT INTO Category (category_id, description, name) VALUES
+INSERT INTO Category (category_id, description, category_name) VALUES
 (1, 'household furniture (ie bedframe)', 'furniture'),
 (2, 'articles of clothing', 'clothes'),
 (3, 'technological devices (ie appliances)', 'technology'),
@@ -319,7 +319,7 @@ INSERT INTO Order_Details (order_id,product_id,product_price,meeting_location_na
 (19,19,'$15.01','West H',0),
 (20,20,'$2.04','Krentzman',1);
 
-INSERT INTO Requests (request_id, nuid, name, category_id, condition_type, description, upper_price_range, lower_price_range)
+INSERT INTO Requests (request_id, nuid, request_name, category_id, condition_type, description, upper_price_range, lower_price_range)
 VALUES
 (1,9,'Mahi Mahi',3,'new','Aenean lectus. Pellentesque eget nunc.',' $113.47',' $14.31'),
 (2,10,'Chicken - Base',4,'slightly used','Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',' $144.50',' $4.62'),
