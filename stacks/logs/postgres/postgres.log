@@ -1,24 +1,5 @@
-2023-04-20 02:25:45.705 UTC [1614] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
-2023-04-20 02:25:45.705 UTC [1614] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2023-04-20 02:25:45.711 UTC [1614] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-04-20 02:25:45.758 UTC [1641] LOG:  database system was shut down at 2023-04-20 02:25:44 UTC
-2023-04-20 02:25:45.840 UTC [1614] LOG:  database system is ready to accept connections
-2023-04-20 02:26:26.319 UTC [1841] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 02:26:27.067 UTC [1841] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 02:31:06.181 UTC [2110] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 02:39:59.939 UTC [1614] LOG:  received smart shutdown request
-2023-04-20 02:39:59.959 UTC [1614] LOG:  background worker "logical replication launcher" (PID 1651) exited with exit code 1
-2023-04-20 02:39:59.961 UTC [1646] LOG:  shutting down
-2023-04-20 02:40:00.165 UTC [1614] LOG:  database system is shut down
-2023-04-20 02:40:28.769 UTC [1356] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
-2023-04-20 02:40:28.769 UTC [1356] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2023-04-20 02:40:28.810 UTC [1356] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-04-20 02:40:28.981 UTC [1387] LOG:  database system was shut down at 2023-04-20 02:40:00 UTC
-2023-04-20 02:40:29.102 UTC [1356] LOG:  database system is ready to accept connections
-2023-04-20 03:05:49.877 UTC [2983] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 03:06:09.591 UTC [1391] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 03:09:49.829 UTC [1391] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 03:12:09.657 UTC [1391] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 03:15:49.918 UTC [1391] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 03:36:51.002 UTC [4672] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
-2023-04-20 03:48:30.884 UTC [1391] WARNING:  could not open statistics file "pg_stat_tmp/global.stat": Operation not permitted
+2023-04-20 03:54:10.463 UTC [1621] LOG:  starting PostgreSQL 13.10 (Ubuntu 13.10-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-04-20 03:54:10.464 UTC [1621] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-04-20 03:54:10.476 UTC [1621] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-04-20 03:54:10.564 UTC [1657] LOG:  database system was shut down at 2023-04-20 03:54:09 UTC
+2023-04-20 03:54:10.669 UTC [1621] LOG:  database system is ready to accept connections
