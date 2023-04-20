@@ -154,10 +154,38 @@ def get_orders_buyer(buyer_id):
     the_response.mimetype = 'application/json'
     return the_response
 
+# test above route
 @products.route('/products-id/<product_id>', methods=['GET'])
 def get_product_id(product_id):
     cursor = db.get_db().cursor()
     cursor.execute('select * from Products where product_id ={0}'.format(product_id))
+    column_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(column_headers, row)))
+    return jsonify(json_data)
+
+# Updates order status
+@products.route('/put-orderstatus/<order_id>/<order_status>', methods=['PUT'])
+def update_order_status(order_id, order_status):
+    cursor = db.get_db().cursor()
+    req_data = request.get_json()
+    current_app.logger.info(req_data)
+
+    query = 'UPDATE Order_Details SET order_status = "' + order_status + '" WHERE order_id = ' + str(order_id)
+    
+    current_app.logger.info(query)
+
+    cursor.execute(query)
+    db.get_db().commit()
+    return "Success"
+
+# test above route
+@products.route('/order-details/<order_id>', methods=['GET'])
+def get_order_details(order_id):
+    cursor = db.get_db().cursor()
+    cursor.execute('select * from Order_Details where order_id ={0}'.format(order_id))
     column_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
