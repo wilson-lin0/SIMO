@@ -60,10 +60,10 @@ def add_new_product():
 
     return "Success"
 
-@products.route('/products/<product_id>', methods=['DELETE'])
+@products.route('/products/delete/<product_id>', methods=['DELETE'])
 def delete_product(product_id):
     cursor = db.get_db().cursor()
-    cursor.execute('DELETE * from Products where product_id = product_id'.format(product_id))
+    cursor.execute('delete from Products where product_id = product_id'.format(product_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
