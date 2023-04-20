@@ -123,6 +123,7 @@ def update_seller(seller_id, phone_number):
     db.get_db().commit()
     return "Success"
 
+# Delete the seller with particular userID
 @sellers.route('/delete-seller/<seller_id>', methods=['DELETE'])
 def delete_seller(seller_id):
     cursor = db.get_db().cursor()

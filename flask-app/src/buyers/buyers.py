@@ -80,16 +80,19 @@ def update_buyer(buyer_id, phone_number):
     return "Success"
 
 # Delete the buyer with particular userID
-@buyers.route('/buyers/<buyer_id>', methods=['DELETE'])
+@buyers.route('/delete-buyer/<buyer_id>', methods=['DELETE'])
 def delete_buyer(buyer_id):
     cursor = db.get_db().cursor()
-    cursor.execute('DELETE * from Buyer where buyer_id = buyer_id'.format(buyer_id))
-    row_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(row_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
+    cursor.execute('DELETE FROM Buyer WHERE buyer_id = {0}'.format(buyer_id))
+    deleted_rows = cursor.rowcount
+
+    if deleted_rows == 0:
+        # buyer with the given ID not found
+        response = jsonify({'message': 'Buyer not found'})
+        response.status_code = 404
+    else:
+        # buyer successfully deleted
+        response = jsonify({'message': 'Buyer deleted successfully'})
+        response.status_code = 200
+
+    return response

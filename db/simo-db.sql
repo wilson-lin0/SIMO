@@ -24,9 +24,9 @@ CREATE TABLE Buyer (
     zip_code INT,
     buyer_first_name VARCHAR(50),
     buyer_last_name VARCHAR(50),
-    FOREIGN KEY (buyer_id) REFERENCES User(nuid),
-    FOREIGN KEY (buyer_first_name) REFERENCES User(first_name),
-    FOREIGN KEY (buyer_last_name) REFERENCES User(last_name)
+    FOREIGN KEY (buyer_id) REFERENCES User(nuid) ON DELETE CASCADE,
+    FOREIGN KEY (buyer_first_name) REFERENCES User(first_name) ON DELETE CASCADE,
+    FOREIGN KEY (buyer_last_name) REFERENCES User(last_name) ON DELETE CASCADE
 );
 
 CREATE TABLE Seller (
@@ -39,9 +39,9 @@ CREATE TABLE Seller (
     zip_code INT,
     seller_first_name VARCHAR(50),
     seller_last_name VARCHAR(50),
-    FOREIGN KEY (seller_id) REFERENCES User(nuid),
-    FOREIGN KEY (seller_first_name) REFERENCES User(first_name),
-    FOREIGN KEY (seller_last_name) REFERENCES User(last_name)
+    FOREIGN KEY (seller_id) REFERENCES User(nuid) ON DELETE CASCADE,
+    FOREIGN KEY (seller_first_name) REFERENCES User(first_name) ON DELETE CASCADE,
+    FOREIGN KEY (seller_last_name) REFERENCES User(last_name) ON DELETE CASCADE
 );
 
 CREATE TABLE Orders (
@@ -51,8 +51,8 @@ CREATE TABLE Orders (
     seller_id INT,
     total_price VARCHAR(20),
     seller_rating INT,
-    FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id),
-    FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)
+    FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id) ON DELETE CASCADE,
+    FOREIGN KEY (seller_id) REFERENCES Seller(seller_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Category (
@@ -69,8 +69,8 @@ CREATE TABLE Products (
     category_id INT,
     condition_type VARCHAR(50),
     seller_id INT,
-    FOREIGN KEY (category_id) REFERENCES Category(category_id),
-    FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)
+    FOREIGN KEY (category_id) REFERENCES Category(category_id) ON DELETE CASCADE,
+    FOREIGN KEY (seller_id) REFERENCES Seller(seller_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Order_Details (
@@ -79,8 +79,8 @@ CREATE TABLE Order_Details (
     product_price VARCHAR(20),
     meeting_location_name VARCHAR(100),
     order_status INT CHECK (order_status=0 OR order_status=1) DEFAULT (0),
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (product_id) REFERENCES Products(product_id)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES Products(product_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Requests (
@@ -92,8 +92,8 @@ CREATE TABLE Requests (
     description VARCHAR(5000),
     upper_price_range VARCHAR(20),
     lower_price_range VARCHAR(20),
-    FOREIGN KEY (nuid) REFERENCES User(nuid),
-    FOREIGN KEY (category_id) REFERENCES Category(category_id)
+    FOREIGN KEY (nuid) REFERENCES User(nuid) ON DELETE CASCADE,
+    FOREIGN KEY (category_id) REFERENCES Category(category_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Moderator (
@@ -105,7 +105,7 @@ CREATE TABLE Moderator (
     city VARCHAR(50),
     state VARCHAR(50),
     zip_code INT,
-    FOREIGN KEY(employee_id) REFERENCES User(nuid)
+    FOREIGN KEY(employee_id) REFERENCES User(nuid) ON DELETE CASCADE
 );
 
 CREATE TABLE Moderator_Email (
@@ -117,15 +117,15 @@ CREATE TABLE Moderator_Email (
 CREATE TABLE User_Email (
     email_address VARCHAR(100),
     nuid INT,
-    FOREIGN KEY (nuid) REFERENCES User(nuid)
+    FOREIGN KEY (nuid) REFERENCES User(nuid) ON DELETE CASCADE
 );
 
 CREATE TABLE Blocked_Users (
     employee_id INT PRIMARY KEY,
     student_id INT,
     reason VARCHAR(5000),
-    FOREIGN KEY (employee_id) REFERENCES Moderator(employee_id),
-    FOREIGN KEY (student_id) REFERENCES User (nuid)
+    FOREIGN KEY (employee_id) REFERENCES Moderator(employee_id) ON DELETE CASCADE,
+    FOREIGN KEY (student_id) REFERENCES User (nuid) ON DELETE CASCADE
 );
 
 INSERT INTO User(nuid, first_name, last_name, password, user_status)
