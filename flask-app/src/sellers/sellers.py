@@ -115,15 +115,13 @@ def update_seller(seller_id, phone_number):
     cursor = db.get_db().cursor()
     req_data = request.get_json()
     current_app.logger.info(req_data)
-
-    query = 'UPDATE Seller SET phone_number = "' + phone_number + '" WHERE seller_id = ' + str(seller_id)
     
+    query = 'UPDATE Seller SET phone_number = "' + phone_number + '" WHERE seller_id = ' + str(seller_id)
     current_app.logger.info(query)
-
+    
     cursor.execute(query)
     db.get_db().commit()
     return "Success"
-
 
 # Delete the seller with particular userID
 @sellers.route('/sellers/<seller_id>', methods=['DELETE'])
