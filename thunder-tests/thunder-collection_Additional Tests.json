@@ -1,0 +1,51 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Additional Tests",
+    "dateExported": "2023-04-20T20:25:38.076Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c4223708-c1a8-4ab8-bc72-0940da899915",
+            "colId": "a9d8f152-04ba-43f2-bb5b-3608d41090da",
+            "containerId": "",
+            "name": "Get All Sellers",
+            "url": "localhost:8001/s/sellers",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-04-19T02:10:21.996Z",
+            "modified": "2023-04-20T18:18:24.822Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "524aa113-12f6-4c99-8a65-77cefcf7730e",
+            "colId": "a9d8f152-04ba-43f2-bb5b-3608d41090da",
+            "containerId": "",
+            "name": "Seller First Named Anestassia",
+            "url": "localhost:8001/s/sellers/first-name/\"Anestassia\"",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-19T02:22:11.506Z",
+            "modified": "2023-04-20T17:58:21.884Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c24ac57e-7aa4-4784-9a99-a2291ff08957",
+            "colId": "a9d8f152-04ba-43f2-bb5b-3608d41090da",
+            "containerId": "",
+            "name": "Seller Last Named Burnsell",
+            "url": "localhost:8001/s/sellers/last-name/\"Burnsell\"",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-19T02:43:19.834Z",
+            "modified": "2023-04-20T17:58:23.854Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
