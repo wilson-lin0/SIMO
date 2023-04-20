@@ -138,5 +138,6 @@ def delete_seller(seller_id):
         # seller successfully deleted
         response = jsonify({'message': 'Seller deleted successfully'})
         response.status_code = 200
-
+    
+    db.get_db().commit()
     return response
