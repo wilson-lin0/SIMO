@@ -164,14 +164,13 @@ def get_product_id(product_id):
         json_data.append(dict(zip(column_headers, row)))
     return jsonify(json_data)
 
-# Updates order status to 1 (completed)
 @products.route('/put-orderstatus/<order_id>', methods=['PUT'])
 def update_order_status(order_id):
     cursor = db.get_db().cursor()
     req_data = request.get_json()
     current_app.logger.info(req_data)
 
-    query = 'UPDATE Order_Details SET order_status = "' + str(1) + '" WHERE order_id = ' + str(order_id)
+    query = 'UPDATE Order_Details SET order_status = "' + str(1) + '"  WHERE order_id = ' + str(order_id)
     
     current_app.logger.info(query)
 
