@@ -21,10 +21,10 @@ def get_sellers():
     return the_response
 
 # Get seller detail for seller with particular userID
-@sellers.route('/sellers/<seller_id>', methods=['GET'])
+@sellers.route('/get-seller/<seller_id>', methods=['GET'])
 def get_sellers_id(seller_id):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from Seller where seller_id = seller_id'.format(seller_id))
+    cursor.execute('select * from Seller where seller_id = {0}'.format(seller_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -39,7 +39,7 @@ def get_sellers_id(seller_id):
 @sellers.route('/sellers/first-name/<seller_first_name>', methods=['GET'])
 def get_sellers_first_name(seller_first_name):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from Seller where seller_first_name = seller_first_name'.format(seller_first_name))
+    cursor.execute('select * from Seller where seller_first_name = {0}'.format(seller_first_name))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -54,7 +54,7 @@ def get_sellers_first_name(seller_first_name):
 @sellers.route('/sellers/last-name/<seller_last_name>', methods=['GET'])
 def get_sellers_last_name(seller_last_name):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from Seller where seller_last_name = seller_last_name'.format(seller_last_name))
+    cursor.execute('select * from Seller where seller_last_name = {0}'.format(seller_last_name))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
