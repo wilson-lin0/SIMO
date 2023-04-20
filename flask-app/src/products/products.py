@@ -60,22 +60,6 @@ def add_new_product():
 
     return "Success"
 
-
-@products.route('/products/delete/<product_id>', methods=['DELETE'])
-def delete_product(product_id):
-    cursor = db.get_db().cursor()
-    cursor.execute('delete from Products where product_id = {0}'.format(product_id))
-    row_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(row_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
-
-
 # Updates a product price
 @products.route('/put-new-price/<product_id>/<price>', methods=['PUT'])
 def update_seller(product_id, price):
@@ -91,20 +75,6 @@ def update_seller(product_id, price):
     db.get_db().commit()
     return "Success"
 
-# Delete the seller with particular userID
-@products.route('/products/<product_id>', methods=['DELETE'])
-def delete_seller(product_id):
-    cursor = db.get_db().cursor()
-    cursor.execute('DELETE * from Products where product_id = {0}'.format(product_id))
-    row_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(row_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
 
 # Creates a new request post
 @products.route('/request/new', methods=['POST'])
@@ -183,3 +153,14 @@ def get_orders_buyer(buyer_id):
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
     return the_response
+
+@products.route('/products-id/<product_id>', methods=['GET'])
+def get_product_id(product_id):
+    cursor = db.get_db().cursor()
+    cursor.execute('select * from Products where product_id ={0}'.format(product_id))
+    column_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(column_headers, row)))
+    return jsonify(json_data)
