@@ -110,33 +110,20 @@ def add_new_seller():
     return "Success"
 
 # Updates a seller
-@sellers.route('/put-new-phone-number/<phone-number>', methods=['PUT'])
-def update_seller():
+@sellers.route('/put-new-phone-number/<seller_id>/<phone_number>', methods=['PUT'])
+def update_seller(seller_id, phone_number):
     cursor = db.get_db().cursor()
     req_data = request.get_json()
     current_app.logger.info(req_data)
 
-    seller_id = req_data['seller_id']
-    phone_number = req_data['phone_number']
-    seller_email = req_data['seller_email']
-    street_address = req_data['street_address']
-    city = req_data['city']
-    state = req_data['state']
-    zip_code = req_data['zip_code']
-    seller_first_name = req_data['seller_first_name']
-    seller_last_name = req_data['seller_last_name']
-    
-    query = 'UPDATE INTO Seller (seller_id, phone_number, seller_email, street_address, city, \
-        state, zip_code, seller_first_name, seller_last_name) \
-        VALUES ("' + str(seller_id) + '", "' + phone_number + '", "' + seller_email + '", "' + street_address + '", \
-            "' + city + '", "' + state + '", "' + zip_code + '", "' + seller_first_name + '",\
-                 "' + seller_last_name + '")'
+    query = 'UPDATE Seller SET phone_number = "' + phone_number + '" WHERE seller_id = ' + str(seller_id)
     
     current_app.logger.info(query)
 
     cursor.execute(query)
     db.get_db().commit()
     return "Success"
+
 
 # Delete the seller with particular userID
 @sellers.route('/sellers/<seller_id>', methods=['DELETE'])

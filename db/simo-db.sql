@@ -18,7 +18,6 @@ CREATE TABLE Buyer (
     buyer_id INT PRIMARY KEY,
     phone_number VARCHAR(12),
     buyer_email VARCHAR(100),
-    total_buyer_rating INT,
     street_address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(50),
@@ -38,7 +37,6 @@ CREATE TABLE Seller (
     city VARCHAR(50),
     state VARCHAR(50),
     zip_code INT,
-    total_seller_rating INT,
     seller_first_name VARCHAR(50),
     seller_last_name VARCHAR(50),
     FOREIGN KEY (seller_id) REFERENCES User(nuid),
@@ -65,7 +63,7 @@ CREATE TABLE Category (
 
 CREATE TABLE Products (
     product_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    name VARCHAR(100),
+    product_name VARCHAR(100),
     description VARCHAR(5000),
     price VARCHAR(10),
     category_id INT,
@@ -266,7 +264,7 @@ INSERT INTO Category (category_id, description, name) VALUES
 (3, 'technological devices (ie appliances)', 'technology'),
 (4, 'other', 'other');
 
-INSERT INTO Products (product_id, name, description, price, category_id, condition_type, seller_id) VALUES
+INSERT INTO Products (product_id, product_name, description, price, category_id, condition_type, seller_id) VALUES
 (1,'Kellogs Cereal In A Cup','Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.','$9.73',2,'worn out',43),
 (2,'Cheese Cheddar Processed','Aliquam sit amet diam in magna bibendum imperdiet.','$1.16',1,'worn out',34),
 (3,'Lemonade - Natural, 591 Ml','Maecenas tincidunt lacus at velit.','$8.43',3,'new',44),

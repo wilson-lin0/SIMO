@@ -37,15 +37,15 @@ def add_new_product():
     the_data = request.json
     current_app.logger.info(the_data)
 
-    name = the_data['name']
+    product_name = the_data['product_name']
     description = the_data['description']
     price = the_data['price']
     category_id = the_data['category_id']
     condition_type = the_data['condition_type']
     seller_id = the_data['seller_id']
 
-    query = 'insert into Products (name, description, price, category_id, condition_type, seller_id) values ("'
-    query += (name) + '", "'
+    query = 'insert into Products (product_name, description, price, category_id, condition_type, seller_id) values ("'
+    query += (product_name) + '", "'
     query += (description) + '", "'
     query += price + '", "'
     query += str(category_id) + '", "'
