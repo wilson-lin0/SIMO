@@ -123,17 +123,19 @@ def update_seller(seller_id, phone_number):
     db.get_db().commit()
     return "Success"
 
-# Delete the seller with particular userID
-@sellers.route('/sellers/<seller_id>', methods=['DELETE'])
+@sellers.route('/delete-seller/<seller_id>', methods=['DELETE'])
 def delete_seller(seller_id):
     cursor = db.get_db().cursor()
-    cursor.execute('DELETE * from Seller where seller_id = seller_id'.format(seller_id))
-    row_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(row_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
+    cursor.execute('DELETE FROM Seller WHERE seller_id = {0}'.format(seller_id))
+    deleted_rows = cursor.rowcount
+
+    if deleted_rows == 0:
+        # seller with the given ID not found
+        response = jsonify({'message': 'Seller not found'})
+        response.status_code = 404
+    else:
+        # seller successfully deleted
+        response = jsonify({'message': 'Seller deleted successfully'})
+        response.status_code = 200
+
+    return response
