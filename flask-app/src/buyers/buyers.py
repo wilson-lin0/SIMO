@@ -66,30 +66,15 @@ def add_new_buyer():
     return "Success"
 
 # Updates a buyer
-@buyers.route('/buyers', methods=['PUT'])
-def update_buyer():
+@buyers.route('/put-new-phone-number/<buyer_id>/<phone_number>', methods=['PUT'])
+def update_buyer(buyer_id, phone_number):
     cursor = db.get_db().cursor()
     req_data = request.get_json()
     current_app.logger.info(req_data)
-
-    buyer_id = req_data['buyer_id']
-    phone_number = req_data['phone_number']
-    buyer_email = req_data['buyer_email']
-    street_address = req_data['street_address']
-    city = req_data['city']
-    state = req_data['state']
-    zip_code = req_data['zip_code']
-    buyer_first_name = req_data['buyer_first_name']
-    buyer_last_name = req_data['buyer_last_name']
     
-    query = 'UPDATE INTO Buyer (buyer_id, phone_number, buyer_email, street_address, city, \
-        state, zip_code, buyer_first_name, buyer_last_name) \
-        VALUES ("' + str(buyer_id) + '", "' + phone_number + '", "' + buyer_email + '", "' + street_address + '", \
-            "' + city + '", "' + state + '", "' + zip_code + '", "' + buyer_first_name + '",\
-                 "' + buyer_last_name + '")'
-    
+    query = 'UPDATE Buyer SET phone_number = "' + phone_number + '" WHERE buyer_id = ' + str(buyer_id)
     current_app.logger.info(query)
-
+    
     cursor.execute(query)
     db.get_db().commit()
     return "Success"
