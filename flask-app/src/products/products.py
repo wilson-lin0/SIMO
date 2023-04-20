@@ -82,7 +82,6 @@ def add_new_request():
     the_data = request.json
     current_app.logger.info(the_data)
 
-    request_id = the_data['request_id']
     nuid = the_data['nuid']
     request_name = the_data['request_name']
     category_id = the_data['category_id']
@@ -91,8 +90,7 @@ def add_new_request():
     upper_price_range = the_data['upper_price_range']
     lower_price_range = the_data['lower_price_range']
 
-    query = 'insert into Requests (request_id, nuid, request_name, category_id, condition_type, description, upper_price_range, lower_price_range) values ("'
-    query += str(request_id) + '", "'
+    query = 'insert into Requests (nuid, request_name, category_id, condition_type, description, upper_price_range, lower_price_range) values ("'
     query += str(nuid) + '", "'
     query += request_name + '", "'
     query += str(category_id) + '", "'
@@ -166,14 +164,14 @@ def get_product_id(product_id):
         json_data.append(dict(zip(column_headers, row)))
     return jsonify(json_data)
 
-# Updates order status
-@products.route('/put-orderstatus/<order_id>/<order_status>', methods=['PUT'])
-def update_order_status(order_id, order_status):
+# Updates order status to 1 (completed)
+@products.route('/put-orderstatus/<order_id>', methods=['PUT'])
+def update_order_status(order_id):
     cursor = db.get_db().cursor()
     req_data = request.get_json()
     current_app.logger.info(req_data)
 
-    query = 'UPDATE Order_Details SET order_status = "' + order_status + '" WHERE order_id = ' + str(order_id)
+    query = 'UPDATE Order_Details SET order_status = "' + str(1) + '" WHERE order_id = ' + str(order_id)
     
     current_app.logger.info(query)
 
