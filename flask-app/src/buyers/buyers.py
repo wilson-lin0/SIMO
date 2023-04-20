@@ -10,7 +10,7 @@ buyers = Blueprint('buyers', __name__)
 def get_buyers():
     cursor = db.get_db().cursor()
     cursor.execute('select buyer_first_name, buyer_last_name,\
-        phone_number, buyer_email, total_buyer_rating from Buyer')
+        phone_number, buyer_email from Buyer')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -52,10 +52,6 @@ def add_new_buyer():
     buyer_first_name = the_data['buyer_first_name']
     buyer_last_name = the_data['buyer_last_name']
 
-   
-
-
-
     query = "insert into Buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name) values "
     query += "((SELECT nuid FROM User WHERE nuid ='" + str(buyer_id) + "'), "
     query += phone_number + '", "'
@@ -66,7 +62,6 @@ def add_new_buyer():
     query += str(zip_code) + '", "'
     query += "(SELECT first_name FROM User WHERE first_name ='" + buyer_first_name + "'), "
     query += "(SELECT last_name FROM User WHERE last_name ='" + buyer_last_name + "'));" 
-
 
     current_app.logger.info(query)
 
@@ -94,7 +89,7 @@ def update_buyer():
     buyer_last_name = req_data['buyer_last_name']
     
     query = 'UPDATE INTO Buyer (buyer_id, phone_number, buyer_email, street_address, city, \
-        state, zip_code, total_seller_rating, seller_first_name, seller_last_name) \
+        state, zip_code, buyer_first_name, buyer_last_name) \
         VALUES ("' + str(buyer_id) + '", "' + phone_number + '", "' + buyer_email + '", "' + street_address + '", \
             "' + city + '", "' + state + '", "' + zip_code + '", "' + buyer_first_name + '",\
                  "' + buyer_last_name + '")'
@@ -107,9 +102,9 @@ def update_buyer():
 
 # Delete the buyer with particular userID
 @buyers.route('/buyers/<buyer_id>', methods=['DELETE'])
-def delete_seller(buyer_id):
+def delete_buyer(buyer_id):
     cursor = db.get_db().cursor()
-    cursor.execute('DELETE * from Seller where seller_id = seller_id'.format(buyer_id))
+    cursor.execute('DELETE * from Buyer where buyer_id = buyer_id'.format(buyer_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
