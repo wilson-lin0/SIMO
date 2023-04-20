@@ -51,7 +51,7 @@ CREATE TABLE Orders (
     date DATETIME DEFAULT CURRENT_TIMESTAMP,
     buyer_id INT,
     seller_id INT,
-    total_price DOUBLE,
+    total_price VARCHAR(20),
     seller_rating INT,
     FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id),
     FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)
@@ -66,7 +66,7 @@ CREATE TABLE Category (
 CREATE TABLE Products (
     product_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name VARCHAR(100),
-    description TEXT,
+    description VARCHAR(5000),
     price VARCHAR(10),
     category_id INT,
     condition_type VARCHAR(50),
@@ -78,7 +78,7 @@ CREATE TABLE Products (
 CREATE TABLE Order_Details (
     order_id INT,
     product_id INT,
-    product_price DOUBLE,
+    product_price VARCHAR(20),
     meeting_location_name VARCHAR(100),
     order_status INT CHECK (order_status=0 OR order_status=1) DEFAULT (0),
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
@@ -91,9 +91,9 @@ CREATE TABLE Requests (
     name VARCHAR(100),
     category_id INT,
     condition_type VARCHAR(50),
-    description TEXT,
-    upper_price_range DOUBLE,
-    lower_price_range DOUBLE,
+    description VARCHAR(5000),
+    upper_price_range VARCHAR(20),
+    lower_price_range VARCHAR(20),
     FOREIGN KEY (nuid) REFERENCES User(nuid),
     FOREIGN KEY (category_id) REFERENCES Category(category_id)
 );
@@ -125,7 +125,7 @@ CREATE TABLE User_Email (
 CREATE TABLE Blocked_Users (
     employee_id INT PRIMARY KEY,
     student_id INT,
-    reason TEXT,
+    reason VARCHAR(5000),
     FOREIGN KEY (employee_id) REFERENCES Moderator(employee_id),
     FOREIGN KEY (student_id) REFERENCES User (nuid)
 );
