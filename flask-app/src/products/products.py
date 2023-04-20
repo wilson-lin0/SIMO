@@ -6,9 +6,9 @@ products = Blueprint('products', __name__)
 
 # Get all the products from the database
 @products.route('/products', methods=['GET'])
-def get_products():
+def get_user():
     cursor = db.get_db().cursor()
-    cursor.execute('SELECT * FROM Products')
+    cursor.execute('select * from Products')
     column_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
