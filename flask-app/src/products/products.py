@@ -153,3 +153,33 @@ def get_requests():
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
     return the_response
+
+# get orders based on seller_id for the seller
+@products.route('/orders-seller/<seller_id>', methods=['GET'])
+def get_orders_seller(seller_id):
+    cursor = db.get_db().cursor()
+    cursor.execute('select * from Orders where seller_id = {0}'.format(seller_id))
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(row_headers, row)))
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+# get orders based on buyer_id for the buyer
+@products.route('/orders-buyer/<buyer_id>', methods=['GET'])
+def get_orders_buyer(buyer_id):
+    cursor = db.get_db().cursor()
+    cursor.execute('select * from Orders where buyer_id = {0}'.format(buyer_id))
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(row_headers, row)))
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
