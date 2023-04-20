@@ -52,18 +52,23 @@ def add_new_buyer():
     buyer_first_name = the_data['buyer_first_name']
     buyer_last_name = the_data['buyer_last_name']
 
-    query = 'insert into Buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name) values ("'
-    query += str(buyer_id) + '", "'
-    query += str(phone_number) + '", "'
+   
+
+
+
+    query = "insert into Buyer (buyer_id, phone_number, buyer_email, street_address, city, state, zip_code, buyer_first_name, buyer_last_name) values "
+    query += "((SELECT nuid FROM User WHERE nuid ='" + str(buyer_id) + "'), "
+    query += phone_number + '", "'
     query += buyer_email + '", "'
     query += street_address + '", "'
     query += city + '", "'
     query += state + '", "'
     query += str(zip_code) + '", "'
-    query += buyer_first_name + '", "'
-    query += buyer_last_name + '")'
+    query += "(SELECT first_name FROM User WHERE first_name ='" + buyer_first_name + "'), "
+    query += "(SELECT last_name FROM User WHERE last_name ='" + buyer_last_name + "'));" 
 
-    current_app.logger.info(query)
+
+    # current_app.logger.info(query)
 
     cursor = db.get_db().cursor()
     cursor.execute(query)

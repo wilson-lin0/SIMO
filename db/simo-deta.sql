@@ -1,6 +1,6 @@
 USE SIMO;
 
-INSERT INTO User(nuid, first_name, last_name, pass, user_status) 
+INSERT INTO User(nuid, first_name, last_name, password, user_status) 
 VALUES
 (1,"Gael","Heyworth","nnTsJw",0),
 (2,"Henrie","Farrear","EyFaj9di9",1),
